@@ -1,0 +1,44 @@
+.title {
+    height: 50px;
+    background: #E6E6E6;
+}
+
+.title-style {
+    font-size: 14px;
+    color: #999999;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 15px;
+    margin: 0px;
+}
+
+ion-content{
+    --background:#f4f4f4;
+}
+
+.list-md {
+    background:none;
+}
+
+ion-item {
+    --background:#f4f4f4 !important;
+}
+
+#map_canvas {
+    height: 500px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .map {
+    height: 50%;
+  }
+
+  .dropDown{
+      max-width: 100%;
+  } 
+  
+  .savebtn{
+    --background: #000000;
+    padding-left: 16px;
+    padding-right: 16px;
+  }

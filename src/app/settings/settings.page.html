@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'settings.setting' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="title">
+    <h5 class="title-style">{{ 'settings.notification' | translate }}</h5>
+  </div>
+  <ion-item>
+    <h6 class="text-style">{{ 'settings.account' | translate }}</h6>
+    <ion-toggle [(ngModel)]="personalinformations.account_details" (ionChange)="changeToggle(personalinformations)" slot="end" mode="ios"></ion-toggle>
+  </ion-item>
+  <div class="title">
+    <h5 class="title-style">{{ 'settings.appointmentstatus' | translate }}</h5>
+  </div>
+  <ion-list>
+    <ion-item>
+      <h6 class="text-style">{{ 'settings.appnotification' | translate }}</h6>
+      <ion-toggle [(ngModel)]="personalinformations.app_notifiation" (ionChange)="changeToggle(personalinformations)" slot="end" mode="ios"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <h6 class="text-style">{{ 'settings.email' | translate }}</h6>
+      <ion-toggle [(ngModel)]="personalinformations.email" (ionChange)="changeToggle(personalinformations)"  slot="end" mode="ios"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <h6 class="text-style">{{ 'settings.sms' | translate }}</h6>
+      <ion-toggle [(ngModel)]="personalinformations.sms" (ionChange)="changeToggle(personalinformations)"  slot="end" mode="ios"></ion-toggle>
+    </ion-item>
+    <!-- <ion-item detail> 
+      <h6 class="text-style">{{ 'settings.review' | translate }}</h6>
+    </ion-item> -->
+  </ion-list>
+
+  <div class="title" style="margin-top: -8px;">
+    <h5 class="title-style">{{ 'settings.setting' | translate }}</h5>
+  </div>
+  <ion-list>
+    <ion-item detail>
+      <h6 class="text-style">{{ 'settings.changepassword' | translate }}</h6>
+    </ion-item>
+    <ion-item detail (click)="openLanguagePopover($event)">
+      <h6 class="text-style">{{ 'settings.automaticenglish' | translate }}</h6>
+    </ion-item>
+    <ion-item detail>
+    <h6 class="text-style">{{ 'settings.themes' | translate }}</h6>
+    </ion-item>
+  </ion-list>
+  
+
+</ion-content>

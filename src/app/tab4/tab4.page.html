@@ -1,0 +1,67 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-title>My Profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content>
+  <div class="cover">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="3">
+        <!-- <img *ngIf="imagedetails.image" src="{{imagedetails.image}}" class="profilePic" style="position:relative;"> -->
+        <img  src="assets/userImage/avatar.png" class="profilePic" style="position:relative;">
+        <div class="editimage" (click)="uploadimage()">
+        <img src="assets/images/edits.svg">
+        </div>
+        </ion-col>
+        <ion-col>
+          <div class="covertxt">
+            <ion-label class="fontMontserrat">Mohamed Ahmed Zaky</ion-label><br>
+            <img src="assets/images/location1.svg"><ion-label class="fontSans fs8">&nbsp;&nbsp;8KM, Dark Horse RD, 1940, 3232</ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div class="favoriteService">
+    <h6 class="favoriteStyle">{{ 'tab4.getbyinvite' | translate }}</h6>
+  </div>
+
+  <ion-list>
+    <ion-item (click)="goToAccountDetailPage()">
+      {{ 'tab4.account' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAddressPage()">
+      {{ 'tab4.Address' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item  (click)="goToReviewPage()">
+      {{ 'tab4.reviews' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+   <!--<ion-item (click)="goToPaymentPage()">
+      {{ 'tab4.payments' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>-->
+    <ion-item (click)="goToSettingPage()">
+      {{ 'tab4.settings' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToFeedabackPage()">
+      {{ 'tab4.feedback' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAboutPage()">
+      {{ 'tab4.About Schedulix' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item>
+    <ion-item (click)="logout()">
+      {{ 'tab4.Logout' | translate }}
+      <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+    </ion-item> 
+  </ion-list>
+
+</ion-content>

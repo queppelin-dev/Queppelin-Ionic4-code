@@ -1,0 +1,68 @@
+.cover {
+    height: 15%;
+    background: #2a2a2a;
+    color: #ffffff;
+}
+
+.profilePic {
+    max-width: 85%;
+}
+
+.covertxt{
+    text-align:left;
+    margin-top: 8px;
+}
+
+.fontMontserrat{
+    font-family: 'Montserrat', sans-serif !important;
+    color:white;
+    font-size: 16px;
+}
+
+.fontSans{
+    font-family:'Source Sans Pro', sans-serif !important;
+    color:white;
+}
+
+.fs8{
+    font-size:8pt;
+}
+
+.favoriteService {
+    height: 10% auto;
+    background: #ED145B;
+}
+
+.favoriteStyle {
+    color: #ffffff;
+    font-size: 14px;
+    font-family:'Source Sans Pro', sans-serif !important;
+    padding: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.item-native {
+    --border-style: dashed !important;
+}
+
+.icon-color {
+   color:#cccccc;
+}
+
+:host {
+
+    --border-style: dashed !important;
+}
+.editimage{
+    position: absolute;
+    bottom: 9px;
+    right: 9px;
+    background: white;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding-left: 6px;
+    padding-top: 2px;
+    padding-right:4px;
+}

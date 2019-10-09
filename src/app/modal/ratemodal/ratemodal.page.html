@@ -1,0 +1,25 @@
+
+
+<ion-content>
+    <div style="text-align: left;
+    padding-left: 10px;">
+        <ion-button fill="clear;" (click)="closemodal()">
+                <ion-icon name="close" ></ion-icon>
+              </ion-button>
+    </div>
+    <div style="text-align:center; margin-top: 135px;">
+<div>
+    <ion-label>{{ 'ratemodal.whatthink' | translate }}</ion-label>
+</div>
+<ion-label>
+    <rating  [rate]="rate"
+    readonly="false" 
+    size="default" 
+    (ngModelChange)="onRateChange($event)">
+   </rating>
+</ion-label>
+   <div class="mt5">
+    <ion-label class="clrg">{{ 'ratemodal.selectrating' | translate }}</ion-label>
+   </div>
+</div>
+</ion-content>

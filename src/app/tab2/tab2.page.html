@@ -1,0 +1,224 @@
+<ion-header style="height:232px;background-color:#2A2A2A; ">
+  <ion-toolbar>
+    <ion-label slot="start"><span class="tit">{{ 'tab2.salon' | translate }}</span><span class="tit clr">&nbsp;&nbsp;{{ 'tab2.beauty' | translate }}</span><br/>
+      <span class="explore">{{ 'tab2.exploresub' | translate }}</span></ion-label>
+      <ion-label class="notification"  slot="end"><img style="max-width:105%;padding:4px;" slot="end" src="assets/images/notification.svg">
+        <ion-badge>2</ion-badge>
+       </ion-label>
+  </ion-toolbar>
+  <div>
+      <ion-searchbar class="fontSans" placeholder="{{ 'tab2.lookingfor' | translate }}"></ion-searchbar>
+  </div>
+  <ion-row>
+    <ion-col size="5.7" style="margin-left:5px;">
+      <!--<ion-item>
+        <ion-label>Select Place</ion-label>
+          <ion-select [(ngModel)]="isType" (ionChange)="nearbyPlace()">
+          <ion-option value="">Select</ion-option>
+              <ion-option value="hospital">Hospital</ion-option>
+              <ion-option value="restaurant">Restaurant</ion-option>
+              <ion-option value="bank">Bank</ion-option>
+              <ion-option value="airport">Airport</ion-option>
+              <ion-option value="library">Library</ion-option>
+              <ion-option value="gym">Gym</ion-option>
+            <ion-option value="atm">Atm</ion-option>
+            <ion-option value="shopping_mall">Shopping Mall</ion-option>
+            <ion-option value="police">Police Station</ion-option>
+            <ion-option value="zoo">Zoo</ion-option>
+          </ion-select>
+        </ion-item>
+        
+        <ion-item>
+        <ion-label>Select Distance</ion-label>
+          <ion-select [(ngModel)]="isKM" (ionChange)="nearbyPlace()">
+          <ion-option value="500">Select</ion-option>
+              <ion-option value="2000">2 KM</ion-option>
+              <ion-option value="4000">4 KM</ion-option>
+              <ion-option value="6000">6 KM</ion-option>
+              <ion-option value="8000">8 KM</ion-option>
+          </ion-select>
+        </ion-item>
+        
+        <div #map id="map"></div>-->
+        <ion-input class="fontSans" type="text" placeholder="{{ 'tab2.near' | translate }}"></ion-input>
+    </ion-col>
+    <ion-col size="5.7" style="margin-right:5px;">
+      <ion-input class="fontSans" (ionchange)="datepicker()" type="text" placeholder="{{ 'tab2.when' | translate }}"></ion-input>
+    </ion-col>
+  </ion-row>
+  <!-- <ion-segment scrollable [(ngModel)]="salon">
+    <ion-segment-button value="All">
+      {{ 'tab2.all' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="Babershop">
+      {{ 'tab2.babershop' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="HairSalon">
+      {{ 'tab2.hairsalon' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="Massage">
+      {{ 'tab2.massage' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="DaySpa">
+      {{ 'tab2.dayspa' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="Beauty">
+      {{ 'tab2.Beauty' | translate }}
+    </ion-segment-button> 
+  </ion-segment> -->
+</ion-header>  
+  
+<ion-content [ngClass]="{'bg1':themes == 'white' }">
+  <ion-list>
+      <div class="contents" *ngFor="let item of conditionalBusinessList" (click)="goToDetailsPage(item)">
+        <div class="cardcontent">
+          <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+          <img class="card" *ngIf="item.image" src="{{item.image}}">
+          <div class="content">
+            <ion-grid  style="padding: 0px;">
+              <ion-row>
+                <ion-col size="2" style="padding-left: 0px; padding-right: 0px;">
+                <img src="assets/images/logo.svg">
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                  <div style="text-align:left;">
+                    <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                    <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item?.distance}}, {{item.address}}</ion-label>
+                  </div>
+                </ion-col>
+                <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div class="full-stars" [ngClass]="{'full-stars1':positions}" [ngStyle]="{'width':item.ratingPercent}"></div>
+                  </div>
+                  <div>
+                  <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab2.review' | translate }}</ion-label>
+                </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+
+  <!-- <div [ngSwitch]="salon">
+    <ion-list *ngSwitchCase="'All'">
+      <div class="contents" *ngFor="let item of businessData" (click)="goToDetailsPage(item)">
+        <div class="cardcontent">
+          <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+          <img class="card" *ngIf="item.image" src="{{item.image}}">
+          <div class="content">
+            <ion-grid  style="padding: 0px;">
+              <ion-row>
+                <ion-col size="2" style="padding-left: 0px; padding-right: 0px;">
+                <img src="assets/images/logo.svg">
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                  <div style="text-align:left;">
+                    <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                    <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item?.distance}}, {{item.address}}</ion-label>
+                  </div>
+                </ion-col>
+                <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div class="full-stars" [ngClass]="{'full-stars1':positions}" [ngStyle]="{'width':item.ratingPercent}"></div>
+                  </div>
+                  <div>
+                  <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab2.review' | translate }}</ion-label>
+                </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Babershop'">
+    
+    </ion-list>
+
+    <ion-list  *ngSwitchCase="'HairSalon'">
+      <div class="contents" *ngFor="let item of businessData" (click)="goToDetailsPage(item)">
+        <div class="cardcontent">
+          <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+          <img class="card" *ngIf="item.image" src="{{item.image}}">
+          <div class="content">
+            <ion-grid  style="padding: 0px;">
+              <ion-row>
+                <ion-col size="2" style="padding-left: 0px; padding-right: 0px;">
+                <img src="assets/images/logo.svg">
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                  <div style="text-align:left;">
+                    <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                    <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item?.distance}}, {{item.address}}</ion-label>
+                  </div>
+                </ion-col>
+                <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div class="full-stars" [ngClass]="{'full-stars1':position}" [ngStyle]="{'width':item.ratingPercent}"></div>
+                  </div>
+                  <div>
+                  <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab2.review' | translate }}</ion-label>
+                </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Massage'">
+      <div class="contents" *ngFor="let item of conditionbusinesslissalon" (click)="goToDetailsPage(item)">
+        <div class="cardcontent">
+          <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+          <img class="card" *ngIf="item.image" src="{{item.image}}">
+          <div class="content">
+            <ion-grid  style="padding: 0px;">
+              <ion-row>
+                <ion-col size="2" style="padding-left: 0px; padding-right: 0px;">
+                <img src="assets/images/logo.svg">
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                  <div style="text-align:left;">
+                    <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                    <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item.address}}</ion-label>
+                  </div>
+                </ion-col>
+                <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+                  <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div class="full-stars" [ngClass]="{'full-stars1':position}" [ngStyle]="{'width':item.ratingPercent}"></div>
+                  </div>
+                  <div>
+                  <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab2.review' | translate }}</ion-label>
+                </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+    </ion-list> -->
+
+    <!-- <ion-list no-lines class="spa" *ngSwitchCase="'DaySpa'">
+      <div>
+        <ion-label><img src="assets/images/search.svg"></ion-label><br/>
+        <ion-label class="fontSans">{{ 'tab2.noresult' | translate }}</ion-label>
+      </div>
+      <div style="margin-top:20px;">
+        <ion-label class="fontSans fs10">{{ 'tab2.notanything' | translate }}</ion-label> 
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Beauty'">
+     
+    </ion-list>
+  </div> -->
+</ion-content>

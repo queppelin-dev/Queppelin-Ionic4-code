@@ -1,0 +1,136 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-label slot="start" (click)="goToTab3Page()"><img  src="assets/images/Back_arrow.svg"></ion-label>
+    <ion-title style="text-align:center;">
+    <ion-label class="fontMoteret">{{ 'tab3.appointment' | translate }}</ion-label>
+    </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]="{'bg1':themes == 'white' }">
+  <div style="margin-top:20px;">
+    <div style="margin:10px;">
+      <div *ngIf="Appointment">
+      <div *ngIf="showappointment">
+   <ion-label class="fms clrw">{{ 'tab3.today' | translate }}</ion-label>
+    <div class="box blg" (click)="goToEditAppointmentPage()" *ngFor="let item of todayData">
+       <ion-grid *ngIf="item">
+        <ion-row>
+          <ion-col size="3" style="text-align:center;">
+          <ion-label class="fmc"><span class="fs12">{{item.appointment_date}}</span><br><br><span class="fs12">{{item.appointment_time}}</span></ion-label>
+          </ion-col>
+          <ion-col size="1" style="border-right:1px solid gray;">
+          </ion-col>
+          <ion-col size="7" style="text-align:left;">
+              <ion-label class="fmc"><span class="fs9 clrg">{{ 'tab3.confirmed' | translate }}</span><br><span class="fs13" *ngIf="item.name">{{item.name}}</span><span class="fs13" *ngIf="!item.name">Make By GLR</span><br><span class="fs9 clrgr">{{item.with_service[0]?.name}}</span></ion-label>
+            </ion-col>
+            <ion-col size="1" class="col1">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+       </div>
+   
+     <div style="margin-top:20px;margin-bottom:10px;">
+     <ion-label class="fms clrw fs10">{{'tab3.upcoming' | translate }}</ion-label>
+     <div class="box blg" (click)="goToEditAppointmentPage()" *ngFor="let item of upcomingData">
+       <ion-grid *ngIf="item">
+        <ion-row>
+          <ion-col size="3" style="text-align:center;">
+          <ion-label class="fmc"><span class="fs12">{{item.appointment_date}}</span><br><br><span class="fs12">{{item.appointment_time}}</span></ion-label>
+          </ion-col>
+          <ion-col size="1" style="border-right:1px solid gray;">
+          </ion-col>
+          <ion-col size="7" style="text-align:left;">
+              <ion-label class="fmc"><span class="fs9 clrg">{{ 'tab3.confirmed' | translate }}</span><br><span class="fs13" *ngIf="item.name">{{item.name}}</span><span class="fs13" *ngIf="!item.name">Make By GLR</span><br><span class="fs9 clrgr">{{item.with_service[0]?.name}}</span></ion-label>
+            </ion-col>
+            <ion-col size="1" class="col1">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+       </div>
+     </div>
+      </div>
+     <div *ngIf="shownoappointment" style="color:white;text-align:center;">
+      <ion-label>{{ 'tab3.Thereisnoappointment' | translate }}</ion-label>
+     </div>
+    
+       <!--<div class="box blg" (click)="goToEditAppointmentPage()">
+          <ion-grid>
+        <ion-row>
+          <ion-col size="3" style="text-align:center;">
+          <ion-label class="fmc"><span class="fs12">Jun</span><br><span class="fs23"> 21</span><br><span class="fs12">11:00 AM</span></ion-label>
+          </ion-col>
+          <ion-col size="1" style="border-right:1px solid gray;">
+          </ion-col>
+          <ion-col size="7" style="text-align:left;">
+              <ion-label class="fmc"><span class="fs9 clrg">{{ 'tab3.confirmed' | translate }}</span><br><span class="fs13">Make By GLR</span><br><span class="fs9 clrgr">Regular Haircut/ No taper with Charles…</span></ion-label>
+            </ion-col>
+            <ion-col size="1" class="col1">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+         </div>
+         <div class="box blg" (click)="goToEditAppointmentPage()">
+          <ion-grid>
+        <ion-row>
+          <ion-col size="3" style="text-align:center;">
+          <ion-label class="fmc"><span class="fs12">Jun</span><br><span class="fs23"> 21</span><br><span class="fs12">11:00 AM</span></ion-label>
+          </ion-col>
+          <ion-col size="1" style="border-right:1px solid gray;">
+          </ion-col>
+          <ion-col size="7" style="text-align:left;">
+              <ion-label class="fmc"><span class="fs9 clrg">{{ 'tab3.confirmed' | translate }}</span><br><span class="fs13">Make By GLR</span><br><span class="fs9 clrgr">Regular Haircut/ No taper with Charles…</span></ion-label>
+            </ion-col>
+            <ion-col size="1" class="col1">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+              </ion-col>
+        </ion-row>
+      </ion-grid>
+           </div>-->
+    </div>
+  </div>
+</div>
+  <div *ngIf="editAppointment" style="background: white;height:100%;">
+  <div class="pt10 ml10 mr10 fs10">
+    <ion-label class="clrg">{{ 'tab3.confirmed' | translate }}</ion-label>
+    <ion-row>
+      <ion-col size="9.5">
+        <ion-label class="fs12">FRI, Jun 21, 2019, 11:00AM</ion-label>
+      </ion-col>
+      <ion-col size="2.5">
+        <ion-label><button class="btn1">{{ 'tab3.call' | translate }}</button></ion-label>
+      </ion-col>
+    </ion-row>  
+    <ion-label><img src="assets/images/note_add.svg">&nbsp;{{ 'tab3.reminder' | translate }}</ion-label>
+  </div>
+    <div class="map" id="map_canvas"></div>
+    <div class="mt10">
+      <ion-row>
+        <ion-col class="left" size="9">
+          <ion-label>Kids Hair with extensions</ion-label>
+        </ion-col>
+        <ion-col class="txtr"  size="3" >
+          <ion-label>10 DBH</ion-label><br>
+        </ion-col>
+      </ion-row>
+      <ion-row class="mt12">
+        <ion-col size="8">
+        </ion-col>
+        <ion-col size="4">
+          <ion-label class="fs7">11:00AM - 11:30 AM</ion-label>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="btn">
+      <ion-button class="changebtn" fill="clear" (click)="changeAppointments()" >
+        {{ 'tab3.change' | translate }}
+      </ion-button>
+      <ion-button class="cancelbtn" fill="clear" (click)="cancelAppointment()" >
+        {{ 'tab3.cancel' | translate }}
+      </ion-button>
+    </div>
+    </div>
+</ion-content>

@@ -1,0 +1,23 @@
+ion-content{
+    --background:#f4f4f4;
+}
+
+.list-md {
+    background:none;
+}
+
+ion-item {
+    --background:#f4f4f4 !important;
+}
+
+.title-style {
+    font-size: 16px;
+    color: #636162;
+    padding-left: 16px;
+    padding-top: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

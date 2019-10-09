@@ -1,0 +1,125 @@
+.title{
+font-size:32pt;
+font-family: 'Montserrat', sans-serif !important;
+color:white;
+}
+.tit{
+  color:#ED145B;
+}
+.enable{
+    font-size:14pt;
+    font-family:'Source Sans Pro', sans-serif !important;
+    color:white;
+}
+ion-content{
+    --background:black;
+}
+.mt30{
+  margin-top:30px;
+}
+.mb40{
+  margin-bottom:40px;
+}
+.content{
+  font-size:11pt;
+    font-family:Source Sans Pro;
+    font-style: regular;
+    color:white;
+}
+.mt10{
+  margin-top:10px;
+}
+ion-button.loc{
+  --border-color:white;
+  --color:white;
+ // font-family:Montserrat;
+ // font-size: 16pt;
+ --border-width:1px;
+ --color-activated:white;
+ text-transform:none;
+ border: 1px solid white;
+ width: 252px;
+ --color-focused:white;
+ font-family:'Source Sans Pro', sans-serif !important;
+
+}
+ion-button{
+  --color:white;
+  --color-activated:white;
+ text-transform:none;
+}
+.pl5{
+  padding-left:5px;
+}
+.pr5{
+  padding-right:5px;
+}
+.mt50{
+  margin-top:50px;
+}
+/*.btn{
+ // background-color: #f41c5c;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  //border-radius: 75px;
+  --padding-start: 27px;
+  --padding-end: 26px;
+  width: 162px;
+  height: 50px;
+  text-transform: none;
+}*/
+.fms{
+  font-family: 'Montserrat', sans-serif !important;
+  font-size:13pt;
+}
+.notnow{
+  font-family:'Source Sans Pro', sans-serif !important;
+}
+
+.themes1 {
+  width: 25px;
+  height: 25px;
+  background: white;
+  border-radius: 50%;
+}
+
+.themes2 {
+  width: 25px;
+  height: 25px;
+  background: black;
+  border-radius: 50%;
+}
+
+ion-item {
+  --background: gray;
+}
+
+.bg1 {
+  --background:white;
+  .title {
+    color:black !important;
+  }
+  .enable {
+    color:black !important;
+  }
+  .fms {
+    color:black !important;
+  }
+  ion-button.loc {
+    border-color: black;
+    --color: black;
+    --border-width: 1px;
+    --color-activated: black;
+    text-transform: none;
+    --color-focused: black;
+    font-family: 'Source Sans Pro', sans-serif !important;
+  }
+  .notnowbtn {
+    color:black !important;
+  }
+}

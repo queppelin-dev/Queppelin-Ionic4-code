@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'address.address' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="title">
+    <p class="title-style">{{ 'address.forsomeservice' | translate }}</p>
+  </div>
+  <ion-row>
+    <ion-col size="12">
+    <ion-item>
+      <!-- <ion-label position="floating">Address</ion-label> -->
+      <ion-input  placeholder="Address" [(ngModel)]="addressDetails.address"></ion-input>
+      <!-- <ion-input *ngIf="!personalinformations.get_user_address">Not available</ion-input> -->
+    </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-select class="dropDown" placeholder="Country" [(ngModel)]="addressDetails.country_id" (ionChange)="getStateData()">
+          <ion-select-option [value]=item.country_id *ngFor = "let item of countryList">{{item.country_name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+    <ion-col>
+      <ion-item>
+        <ion-select class="dropDown" placeholder="State" [(ngModel)]="addressDetails.state_id" (ionChange)="getCityData()">
+          <ion-select-option [value]=item.state_id   *ngFor = "let item of stateList">{{item.state_name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-select class="dropDown" placeholder="City" [(ngModel)]="addressDetails.city_id">
+            <ion-select-option [value]=item.city_id *ngFor = "let item of cityList">{{item.city_name}}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+         <ion-input type="text" placeholder="Post Code" [(ngModel)]="addressDetails.zip_code"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+  <!--<div id="map_canvas"></div>-->
+  <div #mapElement class="map"></div><br><br>
+  
+  <ion-button class="savebtn" expand="full" (click)="updateAddress()">SAVE</ion-button>
+</ion-content>

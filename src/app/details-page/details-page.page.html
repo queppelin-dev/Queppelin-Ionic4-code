@@ -1,0 +1,295 @@
+
+<ion-header class="header">
+  <ion-toolbar color="primary" mode="ios" class="header">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-label class=""  slot="end"><img style="max-width:105%;padding:4px;" slot="end" src="assets/images/favorite-heart-button.svg">
+      </ion-label>
+    <!-- <ion-title>Address</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<div class="product" *ngIf="showSlider">
+  <div class="content" *ngIf="showSlider">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+        <img src="assets/images/logo.svg">
+        </ion-col>
+        <ion-col size="6">
+          <div style="text-align:left;">
+            <ion-label class="fontMoteret">Make By GLR</ion-label><br>
+            <img src="assets/images/location1.svg"><ion-label class="fontSans fs8">&nbsp;&nbsp;8KM, Dark Horse RD,</ion-label>
+          </div>
+        </ion-col>
+        <ion-col size="4">
+        <ion-label> <img src="assets/images/Starflat.svg">
+            <img src="assets/images/Starflat.svg">
+            <img src="assets/images/Starflat.svg">
+            <img src="assets/images/Starlinear.svg">
+            <img src="assets/images/Starlinear.svg">
+          </ion-label> 
+          <div>
+          <ion-label style="font-size:10px;color:white;">122 Reviews</ion-label>
+        </div> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>-->
+<div class="product" *ngIf="showSlider">
+  <div class="content" *ngIf="showSlider">
+      <!--<ion-grid>
+        <ion-row>
+          <ion-col size="2">
+          <img src="assets/images/logo.svg">
+          </ion-col>
+          <ion-col size="6.5">
+            <div>
+              <ion-label class="fontMoteret">Make By GLR</ion-label><br>
+              <img src="assets/images/location1.svg"><ion-label class="fontSans fs8">&nbsp;&nbsp;8KM, Dark Horse RD,</ion-label>
+            </div>
+          </ion-col>
+          <ion-col size="3.5">
+          <ion-label> <img src="assets/images/Starflat.svg">
+              <img src="assets/images/Starflat.svg">
+              <img src="assets/images/Starflat.svg">
+              <img src="assets/images/Starlinear.svg">
+              <img src="assets/images/Starlinear.svg">
+            </ion-label> 
+            <div>
+            <ion-label style="font-size:10px;color:white;">122 Reviews</ion-label>
+          </div> 
+          </ion-col>
+        </ion-row>
+      </ion-grid>-->
+      <div class="contents">
+          <div class="cardcontent">
+            <!--<img class="card" *ngIf="!businessDetails.image" src="assets/images/Card products backgroud.svg">
+            <img class="card" *ngIf="businessDetails.image" src="{{businessDetails.image}}">-->
+            <div class="content">
+              <ion-grid  style="padding: 0px;">
+                <ion-row>
+                  <ion-col size="2">
+                  <img class= "image" *ngIf="!businessDetails.business_logo" src="assets/images/logo.svg">
+                  <img class= "image" *ngIf="businessDetails.business_logo" src="{{businessDetails.business_logo}}">
+                  </ion-col>
+                  <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                    <div style="text-align:left;">
+                      <ion-label class="fontMoteret clrw">{{businessDetails.name}}</ion-label><br>
+                      <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{busineesDistance}}, {{businessDetails.address}}</ion-label>
+                    </div>
+                  </ion-col>
+                  <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+               
+                   <div class="ratings">
+                    <div class="empty-stars"></div>
+                    <div class="full-stars" [ngClass]="{'full-stars1':position}" [ngStyle]="{'width':businessDetails.ratingPercent}"></div>
+                  </div>
+                    <div>
+                    <ion-label style="font-size:10px;color:white;">{{businessDetails.review}} {{ 'tab1.review' | translate }}</ion-label>
+                  </div> 
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+  
+
+  <ion-segment scrollable [(ngModel)]="segmentText" style="background-color:#2A2A2A">
+    <ion-segment-button value="Services">
+      {{ 'details-page.services' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="Details">
+      {{ 'details-page.details' | translate }}
+    </ion-segment-button>
+    <ion-segment-button value="Reviews">
+      {{ 'details-page.reviews' | translate }}
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segmentText">
+    <div [style.display]="segmentText == 'Details' ? 'block' : 'none'" style="width:100%;height:200px">
+      <div #mapElements class="map" id="mydiv1" style="height:100%;width:100%;"></div>
+    </div>
+    <ion-list *ngSwitchCase="'Services'" >
+      <ion-item *ngFor="let item of serviceList" [color]="$index%2 != 0 ? 'light' : ''">
+        <h6 class="text-style">{{item.name}}</h6>
+        <div class="row" slot="end">
+          <div class="col">
+            <h6 class="text-style" style="font-size: 14px;">{{item.price}}{{item.currency}}</h6>
+            <p class="text-style1">{{item.duration}}<span *ngIf="item.time_measurement">{{item.time_measurement}}</span><span *ngIf="!item.time_measurement">min</span></p>
+          </div>
+        </div>
+        <button slot="end" class="btn" (click)="goToBookAppointmentPage(item)"> {{ 'details-page.bookbtn' | translate }}</button>
+      </ion-item>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Details'">
+      <div>
+      <div class="star">
+        <ion-label>
+          <div class="ratings">
+              <div class="empty-stars"></div>
+              <div class="full-stars" [ngStyle]="{'width':businessDetails.ratingPercent}"></div>
+          </div>
+          <span style="padding-left: 5px;">{{businessinfo.review_count}}</span><span class="txt1"> {{ 'details-page.basedon' | translate }} {{businessinfo.review}} {{ 'details-page.clientreview' | translate }}</span>
+        </ion-label> 
+      </div>
+      <hr>
+      <div class="txt">
+        <h6>{{businessinfo.business_description}}</h6>
+      </div>
+      <div class="title">
+        <h5 style="padding:10px;">{{ 'details-page.personal' | translate }}</h5>
+      </div>
+      <ion-item>
+        <img src="assets/images/smartphone.svg">
+        <div class="row">
+          <div class="col">
+            <h6 class="smltxt">{{ 'details-page.contact' | translate }}</h6>
+          </div>
+          <div class="col">
+            <h6 class="medtxt pl8 pr8">{{businessinfo.business_phone}}</h6>
+          </div>
+        </div>
+        <button slot="end" class="btn1">{{ 'details-page.call' | translate }}</button>
+      </ion-item>
+      <div *ngFor="let item of businessinfo.business_timing">
+          <ion-item lines="none">
+              <img src="assets/images/time.svg">
+              <h6 class="medtxt2 pl8 pr8">{{ item.day }}</h6>
+              <h6 class="medtxt1 pl8 pr8" slot="end">{{ item.start_time }} - {{ item.end_time }}</h6>
+            </ion-item>
+      <!--<ion-item lines="none">
+        <img src="assets/images/time.svg">
+        <h6 class="medtxt2 pl8 pr8">{{ 'details-page.montothu' | translate }}</h6>
+        <h6 class="medtxt1 pl8 pr8" slot="end">9:00AM - 6:30PM</h6>
+      </ion-item>
+      <ion-item lines="none">
+        <img src="assets/images/time.svg">
+        <h6 class="medtxt2 pl8 pr8">{{ 'details-page.friday' | translate }}</h6>
+        <h6 class="medtxt1 pl8 pr8" slot="end">7:00AM - 7:30PM</h6>
+      </ion-item>
+      <ion-item>
+        <img src="assets/images/time.svg">
+        <h6 class="medtxt2 pl8 pr8">{{ 'details-page.sattosun' | translate }}</h6>
+        <h6 class="medtxt1" slot="end">9:00AM - 6:30PM</h6>
+      </ion-item>-->
+    </div>
+      <div>
+        <h6 class="medtxt1 pl8 pr8">{{ 'details-page.sunappointment' | translate }}</h6>
+        <h6 class="medtxt1 pl8 pr8 mb0">*{{ 'details-page.scheduleday' | translate }}</h6>
+      </div>
+    </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'Reviews'" style="padding-top:0px;">
+      <ion-grid style="border-bottom: 1px dashed #CCCCCC;">
+        <ion-row>
+          <ion-col size="6" style="text-align: center; border-right: 1px dashed #CCCCCC;" >
+           <!--<h6 class="rating-txt">{{businessReviewCount[0].review_rating}}</h6>
+            <div class="ratings">
+                <div class="empty-stars"></div>
+                <div class="full-stars" [ngStyle]="{'width':ratingPercent}"></div>
+            </div>
+            <h6 style="font-size: 12px; margin-top: 4px;"> {{ 'details-page.basedon' | translate }} {{businessReviewCount[0].review_count}} {{ 'details-page.clientreview' | translate }}</h6>-->
+            <div class="star">
+                <ion-label>
+                  <div class="ratings">
+                      <div class="empty-stars"></div>
+                      <div class="full-stars" [ngStyle]="{'width':businessDetails.ratingPercent}"></div>
+                  </div><br>
+                  <span style="padding-left: 5px;">{{businessinfo.review_count}}</span><span class="txt1"> {{ 'details-page.basedon' | translate }} {{businessinfo.review}} {{ 'details-page.clientreview' | translate }}</span>
+                </ion-label> 
+              </div>
+          </ion-col>
+          <ion-col size="6">
+            <ion-row style="height: 16px;" *ngFor="let item of businessReviewCount">
+              <ion-col size="1" style="font-size: 11px">{{item.review_rating}}</ion-col>
+              <ion-col size="1" style="font-size: 11px">
+                <ion-icon name="star" style="color:#CCCCCC;"></ion-icon>
+              </ion-col>
+              <ion-col class="progress-setting">
+                <ion-progress-bar value="{{item.progressrating}}" class="progress-bar"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="3" style="font-size: 11px">{{item.review_count}}</ion-col>
+            </ion-row>
+          </ion-col>
+        
+        
+            <!--<ion-row style="height: 16px;">
+              <ion-col size="1" style="font-size: 11px">4</ion-col>
+              <ion-col size="1" style="font-size: 11px">
+                <ion-icon name="star" style="color:#CCCCCC;"></ion-icon>
+              </ion-col>
+              <ion-col class="progress-setting">
+                <ion-progress-bar value="0.1" class="progress-bar"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="3" style="font-size: 11px">3</ion-col>
+            </ion-row>
+            <ion-row style="height: 16px;">
+              <ion-col size="1" style="font-size: 11px">3</ion-col>
+              <ion-col size="1" style="font-size: 11px">
+                <ion-icon name="star" style="color:#CCCCCC;"></ion-icon>
+              </ion-col>
+              <ion-col class="progress-setting">
+                <ion-progress-bar value="0.1" class="progress-bar"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="3" style="font-size: 11px">1</ion-col>
+            </ion-row>
+            <ion-row style="height: 16px;">
+              <ion-col size="1" style="font-size: 11px">2</ion-col>
+              <ion-col size="1" style="font-size: 11px">
+                <ion-icon name="star" style="color:#CCCCCC;"></ion-icon>
+              </ion-col>
+              <ion-col class="progress-setting">
+                <ion-progress-bar value="0.2" class="progress-bar"></ion-progress-bar>
+              </ion-col>
+              <ion-col size="3" style="font-size: 11px">1</ion-col>
+            </ion-row>
+            <ion-row style="height: 16px;">
+                <ion-col size="1" style="font-size: 11px">1</ion-col>
+                <ion-col size="1" style="font-size: 11px">
+                  <ion-icon name="star" style="color:#CCCCCC;"></ion-icon>
+                </ion-col>
+                <ion-col class="progress-setting">
+                  <ion-progress-bar value="0.3" class="progress-bar"></ion-progress-bar>
+                </ion-col>
+                <ion-col size="3" style="font-size: 11px">10</ion-col>
+              </ion-row>-->
+        </ion-row>      
+      </ion-grid>
+      <ion-row style="border-bottom: 1px dashed #CCCCCC;" *ngFor="let items of businessreview">
+        <ion-col size="2">
+          <ion-avatar>
+              <img  *ngIf="items.user_comment_logo" src="{{items.user_comment_logo}}">
+            <img  *ngIf="!items.user_comment_logo" src="assets/userImage/avatar.png">
+          </ion-avatar>
+        </ion-col>
+        <ion-col>
+            <div class="ratings">
+                <div class="empty-stars"></div>
+                <div class="full-stars" [ngStyle]="{'width':items.ratingPercent}"></div>
+            </div>
+         <!-- <div *ngFor="let items of businessreview">-->
+          <h6 style="font-size:12px;">{{items.user_comment_name}} <span style="font-size:12px; color:#999999;">({{items.review_date}})</span></h6>
+          <p style="font-size:12px; color:#636162;">{{items.comment}}</p>
+          <div class="reply-bg">
+            <h6 style="font-size:12px; margin-top: 0px;" *ngIf="items.user_reply_name">{{items.user_reply_name}}<span style="font-size:12px; color:#999999;">({{items.reply_date}})</span></h6>
+            <h6 style="font-size:12px; margin-top: 0px;" *ngIf="!items.user_reply_name">Make By GLR<span style="font-size:12px; color:#999999;">({{items.reply_date}})</span></h6>
+            <p style="font-size:12px; color:#636162; margin-bottom: 0px;">Appreciate you thank you.</p>
+          </div>
+         <!--</div>-->
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </div>
+
+</ion-content>

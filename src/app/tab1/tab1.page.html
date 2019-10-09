@@ -1,0 +1,199 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-label slot="start"><span class="tit">schedu</span><span class="tit clr">lix</span><br/>
+    <span class="explore">{{ 'tab1.explore' | translate }}</span></ion-label>
+    <ion-label class="notification"  slot="end"><img style="max-width:105%;padding:4px;" slot="end" src="assets/images/notification.svg">
+     <ion-badge>2</ion-badge>
+    </ion-label>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg" [ngClass]="{'bg1':themes == 'white' }">
+   <div *ngIf="firstTimeLogin == 'yes'" style="margin-top:10px;text-align:center;">
+    <div class="welcome">
+   <ion-label>Welcome back {{userDetails.name}}</ion-label>
+    </div>
+  </div> 
+  <div *ngIf="aferappointment">
+    <div style="margin-top:10px;margin-left:10px;margin-right:10px;">
+        <ion-label class="fms clrw fs10">{{'tab1.confirm' | translate }}</ion-label>
+        <div class="box blg">
+          <ion-grid>
+          <ion-row>
+            <ion-col size="4" style="text-align:center;">
+            <ion-label class="fmc"><span class="fs12">{{appointmentlist[0].appointment_date}}</span><br><br><span class="fs12">{{appointmentlist[0].appointment_time}}</span></ion-label>
+            </ion-col>
+            <ion-col size="1" style="border-right:1px solid gray;">
+            </ion-col>
+            <ion-col size="6" style="text-align:left;">
+                <ion-label class="fmc"><span class="fs9 clrg">{{ 'tab3.confirmed' | translate }}</span><br><span class="fs13" *ngIf="appointmentlist.name">{{appointmentlist[0].name}}</span><span class="fs13" *ngIf="!appointmentlist.name">Make By GLR</span><br><span class="fs9 clrgr">{{appointmentlist[0].with_service[0]?.name}}</span></ion-label>
+              </ion-col>
+              <ion-col size="1" class="col1">
+                  <ion-icon name="ios-arrow-forward"></ion-icon>
+                </ion-col>
+          </ion-row>
+        </ion-grid>
+          </div>
+        </div>
+  </div>
+  <div class="containsbox" style="margin-top:10px;">
+    <ion-slides>
+    <ion-slide *ngFor="let item of businessfavwithoutlist" (click)="goToDetailsPage(item)">
+    <div class="contents">
+      <div class="cardcontent">
+        <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+        <img class="card" *ngIf="item.image" src="{{item.image}}">
+        <div class="content">
+          <ion-grid  style="padding: 0px;">
+            <ion-row>
+              <ion-col size="2">
+              <img class= "image" *ngIf="!item.business_logo" src="assets/images/logo.svg">
+              <img class= "image" *ngIf="item.business_logo" src="{{item.business_logo}}">
+              </ion-col>
+              <ion-col size="5.5" style="padding-left: 0px; padding-right: 0px;">
+                <div style="text-align:left;">
+                  <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                  <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item?.distance}}, {{item.address}}</ion-label>
+                </div>
+              </ion-col>
+              <ion-col size="4.5" style="padding-left: 0px; padding-right: 0px;">
+              <div class="ratings">
+                <div class="empty-stars"></div>
+                <div class="full-stars" [ngClass]="{'full-stars1':position}" [ngStyle]="{'width':item.ratingPercent}"></div>
+              </div>
+                <div>
+                <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab1.review' | translate }}</ion-label>
+              </div> 
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+    </div>
+    </ion-slide>
+    </ion-slides>
+
+  </div>
+  <div class="contains" style="margin-left:10px;margin-top: 25px;">
+    <ion-slides>
+      <ion-slide *ngFor="let items of customData"  (click)="gotoexplorepage(items)">
+        <div class="box" style="border-radius:8px;margin-right:5px !important;" >
+          <ion-label><img src="{{items.image}}"><br/>
+            <span class="fontSans clrw fs8">{{ items.name}}</span>
+          </ion-label>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="contains" style="margin-left:10px;margin-top: 10px;" >
+      <ion-slides>
+        <ion-slide *ngFor="let items of categorylistDatas" (click)="gotoexplorepage(items)">
+    <div class="box" style="border-radius:8px;margin-right:5px !important;">
+      <ion-label><img src="{{items.image}}"><br/>
+    <span class="fontSans clrw fs8">{{ items.name }}</span></ion-label>
+    </div>
+  
+   </ion-slide>
+    </ion-slides>
+  </div>
+ <!--<div class="contains" style="margin-left:10px;margin-top: 25px;">
+      <ion-slides>
+        <ion-slide *ngFor="let item of categorylistDatas">
+    <div class="box" style="border-radius:8px;margin-right:5px !important;">
+      <ion-label><img src="{{item.image}}"><br/>
+    <span class="fontSans clrw fs8">{{ item.name }}</span></ion-label>
+    </div>
+    <div class="box" style="padding:8px;margin-left:10px !important;">
+        <ion-label><img src="assets/images/Education.svg"><br/>
+      <span class="fontSans clrw fs8">{{ 'tab1.education' | translate }}</span></ion-label>
+      </div>
+    </ion-slide>
+    </ion-slides>
+  </div>-->
+    
+    <!---<div class="contains" style="margin-left:10px;margin-top: 25px;">
+      <ion-slides>
+        <ion-slide>
+    <div class="box" style="border-radius:8px;margin-right:0px !important;" (click)="Health()">
+      <ion-label><img src="assets/images/Health & Wellness.svg"><br/>
+    <span class="fontSans clrw fs8">{{ 'tab1.health' | translate }}</span></ion-label>
+    </div>
+    <div class="box" style="padding:8px;margin-left:10px !important;" (click)="Education()">
+        <ion-label><img src="assets/images/Education.svg"><br/>
+      <span class="fontSans clrw fs8">{{ 'tab1.education' | translate }}</span></ion-label>
+      </div>
+  </ion-slide>
+  <ion-slide>
+      <div class="box" (click)="Medicine()">
+        <ion-label><img src="assets/images/Medicine.svg"><br/>
+      <span class="fontSans clrw fs8">{{ 'tab1.medicine' | translate }}</span></ion-label>
+      </div>
+      <div class="box" (click)="Fitness()">
+          <ion-label><img src="assets/images/Fitness & Recreation.svg"><br/>
+        <span class="fontSans clrw fs8">{{ 'tab1.fitness' | translate }}</span></ion-label>
+        </div>
+    </ion-slide>
+    </ion-slides>
+    </div>
+    <div class="contains mt10" style="margin-left:10px;">
+        <ion-slides>
+          <ion-slide>
+      <div class="box" style="margin-right:0px !important;" (click)="Salon()">
+        <ion-label><img src="assets/images/Salon & Beauty.svg"><br/>
+      <span class="fontSans clrw fs8">{{ 'tab1.salon' | translate }}</span></ion-label>
+      </div>
+      <div class="box" style="margin-left:10px !important;" (click)="Professional()">
+          <ion-label><img src="assets/images/Salon & Beauty (1).svg"><br/>
+        <span class="fontSans clrw fs8">{{ 'tab1.professional' | translate }}</span></ion-label>
+        </div>
+    </ion-slide>
+    <ion-slide>
+        <div class="box" (click)="Goverment()">
+          <ion-label><img src="assets/images/Government Services.svg"><br/>
+        <span class="fontSans clrw fs8">{{ 'tab1.goverment' | translate }} </span></ion-label>
+        </div>
+        <div class="box" (click)="Other()">
+            <ion-label><img src="assets/images/Other Services.svg"><br/>
+          <span class="fontSans clrw fs8">{{ 'tab1.other' | translate }}</span></ion-label>
+          </div>
+      </ion-slide>
+      </ion-slides>
+      </div>-->
+      <div class="ml15 mr15 mt10">
+        <ion-label class="fontMoteret clrwb fs16">{{ 'tab1.myfav' | translate }}&nbsp;<span class="clr">{{ 'tab1.appointment' | translate }}</span></ion-label><br/>
+        <ion-label class="fontSans clrwb fs9">{{ 'tab1.nofav' | translate }}</ion-label>
+      </div>
+      <div class="contents" *ngFor="let item of businessfavwithlist" (click)="goToDetailsPage(item)">
+        <div class="cardcontent">
+          <img class="card" *ngIf="!item.image" src="assets/images/Card products backgroud.svg">
+          <img class="card" *ngIf="item.image" src="{{item.image}}">
+          <div class="content">
+            <ion-grid  style="padding: 0px;">
+              <ion-row>
+                <ion-col size="2">
+                <img class= "image" *ngIf="!item.business_logo" src="assets/images/logo.svg">
+                <img class= "image" *ngIf="item.business_logo" src="{{item.business_logo}}">
+                </ion-col>
+                <ion-col size="6" style="padding-left: 0px; padding-right: 0px;">
+                  <div style="text-align:left;">
+                    <ion-label class="fontMoteret clrw">{{item.name}}</ion-label><br>
+                    <img src="assets/images/location1.svg"><ion-label class="fontSans clrw fs8">&nbsp;&nbsp;{{item?.distance}}, {{item.address}}</ion-label>
+                  </div>
+                </ion-col>
+                <ion-col size="4" style="padding-left: 0px; padding-right: 0px;">
+             
+                 <div class="ratings">
+                  <div class="empty-stars"></div>
+                  <div class="full-stars" [ngClass]="{'full-stars1':position}" [ngStyle]="{'width':item.ratingPercent}"></div>
+                </div>
+                  <div>
+                  <ion-label style="font-size:10px;color:white;">{{item.review}} {{ 'tab1.review' | translate }}</ion-label>
+                </div> 
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </div>
+        </div>
+      </div>
+       
+</ion-content>

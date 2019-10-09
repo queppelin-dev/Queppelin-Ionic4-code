@@ -1,0 +1,89 @@
+.item-native{
+    display:none !important;
+}
+.timebtnactive{
+    --border-color: #ED145B;
+    color: #ED145B;
+    --border-width: 1px;
+    --color-activated: white;
+    text-transform: none;
+    border: 1px solid #ED145B;
+    --color-focused: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding: 10px;
+    margin-right:10px;
+    margin-left:10px;
+}
+
+.timebtnnotactive{
+--color-activated: white;
+    text-transform: none;
+    border: 1px solid gray;
+    --color-focused: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding: 10px;
+    margin-right: 10px;
+    background: white;
+}
+
+button:focus {
+    border: 1px solid #ED145B;
+    color: #ED145B;
+}
+.mt5{
+    margin-top:5px;
+}
+.fs8{
+    font-size:8pt;
+}
+.clrgray{
+    color:gray;
+}
+.chat{
+    border-top: 1px solid gray;
+    //border-top-style: dotted;
+    //border-bottom-color:gray;
+    margin-top: 5px;
+    padding-top: 5px;
+}
+.mt10{
+    margin-top:10px;
+}
+.confirmbtn{
+    --border-color:white;
+    --color:white;
+   // font-family:Montserrat;
+   // font-size: 16pt;
+   --border-width:1px;
+   --color-activated:white;
+   text-transform:none;
+   border: 1px solid white;
+   width: 100%;
+   --color-focused:white;
+   font-family:'Source Sans Pro', sans-serif !important;
+  background-color: black;
+  }
+  .textcntr{
+      text-align:center;
+  }
+  .pt10{
+      padding-top: 10px;
+  }
+  ion-item.item.md.in-list.ion-focusable.hydrated {
+    display: none !important;
+}
+.ml5{
+    margin-left:5px;
+}
+.mr5{
+    margin-right:5px;
+}
+.left{
+    text-align:left;
+}
+.right{
+    text-align:right;
+}
+ion-item {
+    --padding-start:0px !important; 
+}

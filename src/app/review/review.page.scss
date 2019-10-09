@@ -1,0 +1,93 @@
+ion-toolbar{
+    --background:#2A2A2A;
+    padding:5px;
+  }
+  .fontMoteret{
+    font-family: 'Montserrat', sans-serif !important;
+    color:white;
+  }
+  .sort{
+    padding-top: 6pt;
+    color: #999999;
+    background: #E6E6E6;
+    padding-bottom: 6pt;
+    text-align:center;
+  }
+  .fs10{
+      font-size:10pt;
+  }
+  .date{
+    padding-top: 6pt;
+    color: black;
+    background: #f1eded;
+    padding-bottom: 6pt;
+  }
+  img.people {
+    width: 45px;
+}
+.fs9{
+    font-size:9pt;
+}
+.fontSans{
+    font-family:'Source Sans Pro', sans-serif !important;
+  }
+  .gray {
+    background: #636162;
+    color: white;
+}
+.fs8{
+    font-size:8pt;
+}
+.fs7{
+    font-size:7pt;
+}
+.ml6{
+    margin-left:-6px;
+}
+.clrb{
+    color:black;
+}
+.clrg{
+    color:#636162;
+}
+ion-card-content{
+    background-color: #EDEDED;
+    padding-left:4px;
+     padding-right:0px;
+      padding-top:8px;
+}
+.colml{
+     margin-left: -14px;
+    margin-top: -4px;
+}
+ion-input{
+    --placeholder-color:white;
+    --placeholder-opacity:1;
+}
+.accordian-list{
+    //background: light;
+    height:100%;
+}
+rating {
+    ion-icon {
+      color: gray;
+      padding:0px !important;
+      margin-right:-10px;
+  
+      &.filled {
+        color: #ffb400;
+      }
+    }
+  }
+  .sc-ion-buttons-md-s  .button-has-icon-only.button-clear{
+      margin-left:-13px !important;
+  }
+  .box-shadow{
+    box-shadow: 2px 1px 3px 0px grey;
+  }
+  .ml10{
+    margin-left:10px;
+  }
+  .mr14{
+    margin-right:14px;
+  }

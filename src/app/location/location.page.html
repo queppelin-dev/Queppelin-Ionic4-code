@@ -1,0 +1,59 @@
+
+<ion-content style="text-align: center;overflow-y: auto;" [ngClass]="{'bg1':themes == 'white' }">
+  <ion-item style="padding-top:20px;">
+    <div class="col themes1" slot="start" (click)="setThemes('white')"></div>
+    <div class="col themes2" slot="start" (click)="setThemes('black')"></div>
+    <!-- <ion-icon style="color:white;" name="more" slot="icon-only" (click)="openLanguagePopover($event)" slot="end">
+    </ion-icon> -->
+  </ion-item>
+
+  <div style="padding-top:20px;text-align: right; padding-right: 12px;">
+  <!-- <div (click)="openLanguagePopover($event)">
+    <ion-icon style="color:green;" name="more" slot="icon-only">
+    </ion-icon>
+  </div> -->
+  </div>
+  <div *ngIf="location">
+  <div class="pl5 pr5">
+   
+    <ion-label class="title">schedul<span class="tit">ix</span></ion-label><br/>
+    <ion-label class="enable"> {{ 'location.enable' | translate }}</ion-label>
+    <div class="mt30 mb40">
+      <img style="max-width:50%;" src="assets/images/location.svg" class="img">
+    </div>
+  </div>
+  <div class="content pl5 pr5">
+    <ion-label class="fms">{{ 'location.content' | translate }}</ion-label>
+  </div>
+  <div class="content mt10 pl5 pr5">
+      <ion-label class="fms">{{ 'location.uselocation' | translate }} </ion-label>
+  </div>
+  <div class="btn pl5 pr5 mt50" style="text-align:center;">
+    <ion-button class="loc" fill="clear" (click)="enableLocation()" >
+      {{ 'location.enablebtn' | translate }}
+    </ion-button><br/>
+    <ion-button  fill="clear" class="notnowbtn" (click)="gototabs()">
+      {{ 'location.notnowbtn' | translate }}
+    </ion-button>
+
+  </div>
+</div>
+<div *ngIf="locationEnable">
+  <div class="pl5 pr5" style="padding-top:0px;">
+    <ion-label class="title">schedul<span class="tit">ix</span></ion-label><br/>
+    <ion-label class="enable">{{ 'location.enable' | translate }}</ion-label>
+  </div>
+
+  <div style="position:absolute;bottom:170px;right:40px;">
+    <img style="max-width:70%;" src="assets/images/Arrow.svg">
+  </div>
+  <div style="position:absolute;bottom:35px;left:17px;">
+  <div class="content pl5 pr5">
+    <ion-label class="fms" text-center>{{ 'location.content' | translate }}</ion-label>
+  </div>
+  <div class="content mt10 pl5 pr5">
+      <ion-label class="fms" text-center>{{ 'location.uselocation' | translate }}</ion-label>
+  </div>
+</div>
+</div>
+</ion-content>

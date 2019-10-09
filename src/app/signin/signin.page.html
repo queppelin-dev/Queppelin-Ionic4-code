@@ -1,0 +1,358 @@
+<ion-header>
+  <ion-toolbar color="primary" mode="ios" *ngIf="Signin">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="fs12 fontMoteret">{{ 'signin.signinto' | translate }} <span class="clr">{{ 'signin.continue' | translate }}</span></ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary" mode="ios" *ngIf="Confirmation">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="fs12 fontMoteret">{{ 'signin.enterphone' | translate }} <span class="clr">{{ 'signin.number' | translate }}</span></ion-title>
+  </ion-toolbar> 
+  <ion-toolbar color="primary" mode="ios" *ngIf="signup || email">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title class="fs12 fontMoteret">{{ 'signin.enteremail' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<!--<div class="mt30 txtcntr" [ngStyle]="{'background-image':bgImg}"  *ngIf="Signin">
+<ion-label><img src="assets/images/Signin.svg"></ion-label>
+<div class="mt10">
+<ion-label class="fontSans fs15">{{ 'signin.signin' | translate }}</ion-label>
+</div>
+<div class="mt5">
+<ion-label  class="fontSans fs11">{{ 'signin.continueappointment' | translate }}</ion-label>
+</div>
+<div class="mt15 ml5 mr10">
+  <ion-button class="emailbtn" fill="clear" (click)="goToPhonenoPage()">
+    {{ 'signin.continuephone' | translate }}
+  </ion-button>
+</div>
+<div class="or-seperator">
+    <div class="or">or</div>
+    </div>
+<div class="mt15 ml5 mr10">
+    <ion-button class="emailbtn" fill="clear" (click)="goToEmailPage()" >
+      {{ 'signin.contineemail' | translate }}
+    </ion-button>
+  </div>
+<div class="or-seperator">
+<div class="or">or</div>
+</div>
+<div class="mt15 ml5 mr10">
+  <ion-button class="facebookbtn" fill="clear"  >
+  <img src="assets/images/icon_Landing_Facebook.svg">{{ 'signin.continuefacebook' | translate }}
+  </ion-button>
+</div>
+<div class="unwanteddetails" >
+  <ion-label class="fontSans fs9">{{ 'signin.unwanteddetails' | translate }}</ion-label>
+</div>
+</div>-->
+
+<!--<div class="mt30 txtcntr" *ngIf="Phoneno">
+  <ion-label><img src="assets/images/Enrer_mobile_number.svg"></ion-label>
+  <div class="mt10">
+    <ion-label class="fontSans fs15">{{ 'signin.enterphonenumber' | translate }}</ion-label>
+    </div>
+    <div class="mt5">
+    <ion-label  class="fontSans fs11">{{ 'signin.entervalidnumber' | translate }}</ion-label>
+    </div>
+    <div class="enternumber">
+      <ion-item>
+        <img src="assets/images/smartphone.svg">&nbsp;&nbsp;<ion-input  type="number" placeholder="{{ 'signin.phonenumber' | translate }}"></ion-input>
+      </ion-item>      
+    </div>
+    <div class="mt15 ml5 mr10">
+      <ion-button class="donebtn" fill="clear" (click)="goToConfirmationPage()">
+        {{ 'signin.donebtn' | translate }}
+      </ion-button>
+    </div>
+</div>-->
+<div class= "company_logo pt30 txtcntr"  [ngStyle]="{'background-image':bgImg}"  *ngIf="Signin">
+  <ion-label><img src="assets/images/Signin.svg"></ion-label>
+  <div class="mt10">
+  <ion-label class="fontSans fs15 clrw">{{ 'signin.signin' | translate }}</ion-label>
+  </div>
+  <div class="mt5">
+  <ion-label  class="fontSans fs11 clrw">{{ 'signin.continueappointment' | translate }}</ion-label>
+  </div>
+  <div class="mt15 ml5 mr10">
+    <ion-button class="emailbtn" fill="clear" (click)="goToPhonenoPage()">
+      {{ 'signin.continuephone' | translate }}
+    </ion-button>
+  </div>
+  <!--<div class="or-seperator">
+      <div class="or">or</div>
+      </div>-->
+      <div class="ormid">or</div>
+  <div class="mt15 ml5 mr10">
+      <ion-button class="emailbtn" fill="clear" (click)="goToEmailPage()" >
+        {{ 'signin.contineemail' | translate }}
+      </ion-button>
+    </div>
+  <div class="ormid">or</div>
+  <div class="mt15 ml5 mr10">
+    <ion-button class="facebookbtn" fill="clear"  (click)="loginWithFb()">
+    <img src="assets/images/icon_Landing_Facebook.svg">{{ 'signin.continuefacebook' | translate }}
+    </ion-button>
+  </div>
+  <div class="mt15 ml5 mr10">
+    <ion-button class="facebookbtn" fill="clear"  (click)="doGoogleLogin()">
+    <img src="assets/images/icon_Landing_Facebook.svg">Google
+    </ion-button>
+  </div>
+  <div class="unwanteddetails" >
+    <ion-label class="fontSans fs9 clrw">{{ 'signin.unwanteddetails' | translate }}</ion-label>
+  </div>
+</div>
+   <!--<div class="mt30 txtcntr company_logo" id="random" [ngStyle]="{'background-image':bgImg}" *ngIf="email"> 
+    <ion-label><img src="assets/images/Enrer_mobile_number.svg"></ion-label>
+    <div class="mt10">
+      <ion-label class="fontSans fs15">  {{ 'signin.enteremail' | translate }}</ion-label>
+      </div>
+      <div class="mt5">
+      <ion-label  class="fontSans fs11"> {{ 'signin.entervaildemail' | translate }}</ion-label>
+      </div>
+      <div class="enternumber">
+        <ion-item class="items">
+         &nbsp;&nbsp;<ion-input  type="email" [(ngModel)]="loginData.email" name="email" placeholder="{{ 'signin.email' | translate }}"></ion-input>
+        </ion-item>      
+      </div>
+      <div class="enternumber">
+          <ion-item class="items">
+           &nbsp;&nbsp;<ion-input  type="password" [(ngModel)]="loginData.password" name="password" placeholder="{{ 'signin.password' | translate }}"></ion-input>
+          </ion-item>      
+        </div>
+      <div class="mt15 ml5 mr10">
+        <ion-button class="donebtn" fill="clear" (click)="goToSchedulixPage()">
+          {{ 'signin.signin' | translate }}
+        </ion-button>
+      </div>
+      <div class="mt10 ml5 mr10">
+        <ion-button class="donebtn" fill="clear" (click)="goToSignupPage()">
+          {{ 'signin.signup' | translate }}
+        </ion-button>
+      </div>
+    </div>-->
+    <div class= "company_logo"  [ngStyle]="{'background-image':bgImg}"  *ngIf="email">
+      <div class="pt10 pl10 pr10">
+          <ion-label class="title">schedul<span class="tit">ix</span></ion-label>
+      </div>
+      <div class="position">
+        <div class="ml8 mr8">
+        <ion-label class="fontSans clrw fnt22">  {{ 'signin.GetthebestHealth&Wellness' | translate }}</ion-label>
+        </div>
+      <div class="mt10 ml8 mr8">
+        <ion-label class="fontSans clrw fnt9">{{ 'signin.EducationSalon&BeautyProfessional Services' | translate }}</ion-label>
+      </div>
+      <div class="mt10">
+       <div class="bg_image">
+         <div class="pt5">
+         <div class="mt10 ml8 mr8">
+           <ion-label  class="fontSans clrw">{{ 'signin.Logintoyouraccount' | translate }}</ion-label>
+         </div>
+         <div class="mt10 ml8 mr8">
+            <ion-label  class="fontSans clrw fnt9">{{ 'signin.Manageyouraccountandseeyouappointmentshistory' | translate }}</ion-label>
+          </div>
+         <div class="mt10 ml8 mr8">
+            <ion-item class="item"><ion-icon ios="ios-mail" md="md-mail"></ion-icon>&nbsp;&nbsp;
+              <ion-input  type="email" [(ngModel)]="loginData.email" name="email" placeholder="{{ 'signin.email' | translate }}"></ion-input>
+            </ion-item>
+          </div>
+          <div class="mt10 ml8 mr8">
+              <ion-item class="item"><img src="assets/images/padlock.svg">&nbsp;&nbsp;
+                <ion-input  type="password" [(ngModel)]="loginData.password" name="password" placeholder="{{ 'signin.password' | translate }}"></ion-input>
+              <span><a href="#">{{ 'signin.Forgot' | translate }}</a></span></ion-item>
+            </div>
+            <div class="mt10 ml8 mr8"  (click)="goToSchedulixPage()">
+              <ion-button class="loc" fill="clear" >
+                {{ 'signin.Login' | translate }}
+              </ion-button>
+            </div>
+            <div class="ml8 mr8 txtcntr">
+              <ion-button fill="clear" (click)="goToSignupPage()">
+                {{ 'signin.Don’thaveanaccount' | translate }} <a style="color:white"> {{ 'signin.signup' | translate }}</a>
+              </ion-button>
+            </div>
+          </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  <!---<div class= "company_logo"  [ngStyle]="{'background-image':bgImg}"  *ngIf="Phoneno">
+  <div class="pt10 pl10 pr10">
+      <ion-label class="title">schedul<span class="tit">ix</span></ion-label>
+  </div>
+  <div class="position">
+    <div class="ml8 mr8">
+    <ion-label class="fontSans clrw fnt22">Get the best Health & Wellness,</ion-label>
+    </div>
+  <div class="mt10 ml8 mr8">
+    <ion-label class="fontSans clrw fnt9">Education, Salon & Beauty, Professional Services</ion-label>
+  </div>
+  <div class="mt10">
+   <div class="bg_image">
+     <div class="pt5">
+     <div class="mt10 ml8 mr8">
+       <ion-label  class="fontSans clrw">Login to your account</ion-label>
+     </div>
+     <div class="mt10 ml8 mr8">
+        <ion-label  class="fontSans clrw fnt9">Manage your account and see you appointments history</ion-label>
+      </div>
+     <div class="mt10 ml8 mr8">
+        <ion-item class="item"><img src="assets/images/smartphone1.svg">&nbsp;&nbsp;
+          <ion-input type="number" placeholder="Phone number"></ion-input>
+        </ion-item>
+      </div>
+      <div class="mt10 ml8 mr8">
+          <ion-item class="item"><img src="assets/images/padlock.svg">&nbsp;&nbsp;
+            <ion-input type="password" placeholder="Password"></ion-input>
+          <span><a href="#">Forgot</a></span></ion-item>
+        </div>
+        <div class="mt10 ml8 mr8" (click)="goToConfirmationPage()">
+          <ion-button class="loc" fill="clear" >
+            Login
+          </ion-button>
+        </div>
+        <div class="ml8 mr8 txtcntr">
+          <ion-button fill="clear" (click)="goToenterPhonenoPage()">
+            Don’t have an account? <a style="color:white">Sign up</a>
+          </ion-button>
+        </div>
+      </div>
+  </div>
+  </div>
+  </div>
+</div>-->
+<div class= "company_logo pt30 txtcntr"  [ngStyle]="{'background-image':bgImg}"  *ngIf="enterPhoneno">
+        <ion-label><img src="assets/images/Enrer_mobile_number.svg"></ion-label>
+        <div class="mt10">
+          <ion-label class="fontSans fs15 clrw">{{ 'signin.enterphonenumber' | translate }}</ion-label>
+          </div>
+          <div class="mt5">
+          <ion-label  class="fontSans fs11 clrw">{{ 'signin.entervalidnumber' | translate }}</ion-label>
+          </div>
+          <div class="enternumber">
+            <ion-item>
+              <img src="assets/images/smartphone.svg">
+              <ion-select placeholder="Country code"  [(ngModel)]="otpdata.mobile" name="mobile">
+             <ion-select-option value="+91">+91</ion-select-option>
+            <ion-select-option value="+92">+92</ion-select-option>
+            <ion-select-option value="+966"> +966</ion-select-option>
+             </ion-select>
+              <ion-input  type="text" [(ngModel)]="otpdata.mobile" name="mobile" placeholder="{{ 'signin.phonenumber' | translate }}"></ion-input>
+            </ion-item>      
+          </div>
+          <div class="mt15 ml5 mr10">
+            <ion-button class="donebtn" fill="clear" (click)="goToConfirmationPage()">
+              {{ 'signin.SendOtp' | translate }}
+            </ion-button>
+          </div>
+</div>
+<div class= "company_logo pt30 txtcntr"  [ngStyle]="{'background-image':bgImg}"  *ngIf="signup">
+  <div class="mt10">
+    <ion-label class="fontSans fs15">{{ 'signin.signup' | translate }}</ion-label>
+  </div>
+ <!--<div class="enternumber">
+    <ion-item class="items">
+        &nbsp;&nbsp;<ion-input  type="text"  [(ngModel)]="userData.name" name="name" placeholder="{{ 'signin.name' | translate }}"></ion-input>
+    </ion-item> 
+  </div>-->
+  <div class="enternumber">
+    <ion-item class="items">
+     &nbsp;&nbsp;<ion-input  type="text" [(ngModel)]="userData.first_name" name="first_name" placeholder="{{ 'signin.firstname' | translate}}"></ion-input>
+    </ion-item>      
+  </div> 
+  <div class="enternumber">
+    <ion-item class="items">
+     &nbsp;&nbsp;<ion-input  type="text" [(ngModel)]="userData.last_name" name="last_name" placeholder="{{ 'signin.lastname' | translate }}"></ion-input>
+    </ion-item>      
+  </div> 
+  <div class="enternumber">
+    <ion-item class="items">
+     &nbsp;&nbsp;<ion-input  type="email" [(ngModel)]="userData.email" name="email" placeholder="{{ 'signin.email' | translate }}"></ion-input>
+    </ion-item>      
+  </div>
+  <div class="enternumber">
+      <ion-item class="items">
+       &nbsp;&nbsp;<ion-input  type="password" [(ngModel)]="userData.password" name="password" placeholder="{{ 'signin.password' | translate }}"></ion-input>
+      </ion-item>      
+    </div>
+    <div class="enternumber">
+        <ion-item class="items">
+         &nbsp;&nbsp;<ion-input  type="password" [(ngModel)]="userData.confirmed" name="confirmed"  placeholder="{{ 'signin.confirmpassword' | translate }}"></ion-input>
+        </ion-item>      
+    </div>
+    <div class="mt10 ml5 mr10">
+        <ion-button class="donebtn" fill="clear" (click)="goToMainPage()">
+          {{ 'signin.registerbtn' | translate }}
+        </ion-button>
+    </div>
+</div>
+<div class= "company_logo pt30 txtcntr"  [ngStyle]="{'background-image':bgImg}"  *ngIf="Confirmation">
+  <ion-label><img src="assets/images/Enrer_mobile_number.svg"></ion-label>
+<div class="mt10">
+  <ion-label class="fontSans fs15"> {{ 'signin.confirmationcode' | translate }}</ion-label>
+  </div>
+  <div class="mt5">
+  <ion-label  class="fontSans fs11">{{ 'signin.confirmationtext' | translate }}</ion-label>
+  </div>
+  <div class="ml5 mr5">
+  <div class="bt0">
+    <ion-row text-center>
+      <ion-col>
+       <ion-input class="otp"  required maxLength="1"  tabindex="1" (keyup)="moveToNext(b)"  [(ngModel)]="otps.otp1" name="otp1">
+       </ion-input>
+       <ion-input class="otp"  required maxLength="1" tabindex="2" #b (keyup)="moveToNext(c)" [(ngModel)]="otps.otp2" name="otp2">
+       </ion-input>
+       <ion-input class="otp" required maxLength="1"  tabindex="3" #c (keyup)="moveToNext(d)" [(ngModel)]="otps.otp3" name="otp3">
+       </ion-input>
+       <ion-input class="otp"   required maxLength="1" tabindex="4" #d (keyup)="moveToNext(e)" [(ngModel)]="otps.otp4" name="otp4">
+       </ion-input>
+       <ion-input class="otp"  required maxLength="1" tabindex="5" #e (keyup)="moveToNext(f)"  [(ngModel)]="otps.otp5" name="otp5">
+        </ion-input>
+        <ion-input class="otp"  required maxLength="1" tabindex="6" #f   [(ngModel)]="otps.otp6" name="otp6">
+          </ion-input>
+      </ion-col>
+    </ion-row>
+  </div>
+</div>
+  <div class="mt5 ml5 mr5">
+    <ion-row>
+      <ion-col (click)="resendcode()">
+      <button style="background:none;"><ion-label class="ft5 clr">{{ 'signin.resendcode' | translate }} <br>to {{otpusers.mobileNum}}</ion-label></button> 
+  </ion-col>
+  <ion-col (click)="gotophonepage()">
+   <button style="background:none;"> <ion-label class="ft5 clr">{{ 'signin.changephoneno' | translate }}</ion-label></button>
+  </ion-col>
+    </ion-row>
+  </div>
+  <div class="mt15 ml5 mr10">
+    <ion-button class="donebtn" fill="clear" (click)="registrationCheck()">
+      {{ 'signin.nextbtn' | translate }}
+    </ion-button>
+  </div>
+</div>
+<div class= "company_logo pt30 txtcntr"  [ngStyle]="{'background-image':bgImg}"  *ngIf="signupformobile">
+    <div class="enternumber">
+        <ion-item class="items">
+            &nbsp;&nbsp;<ion-input  type="text"  [(ngModel)]="mobileregData.first_name" name="first_name" placeholder="{{ 'signin.firstname' | translate }}"></ion-input>
+        </ion-item> 
+      </div>     
+      <div class="enternumber">
+        <ion-item class="items">
+         &nbsp;&nbsp;<ion-input  type="text" [(ngModel)]="mobileregData.last_name" name="last_name" placeholder="{{ 'signin.lastname' | translate }}"></ion-input>
+        </ion-item>      
+      </div>
+        <div class="mt10 ml5 mr10">
+            <ion-button class="donebtn" fill="clear" (click)="goToDashboardPages()">
+              {{ 'signin.registerbtn' | translate }}
+            </ion-button>
+        </div>
+</div>
+</ion-content>

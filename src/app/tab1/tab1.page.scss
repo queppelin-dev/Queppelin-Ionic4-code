@@ -1,0 +1,277 @@
+
+  
+  .clr{
+    color:#ED145B;
+  }
+  ion-toolbar{
+    --background:#2A2A2A;
+    padding:5px;
+  }
+ /* .notification{
+    width:18px;
+    margin-right:5px;
+  }*/
+  .contents{
+    margin:10px;
+  }
+  .bg{
+    --background:#000000;
+
+  }
+  .clrwb{
+    color:white;
+  }
+  .bg1{
+    --background:white;
+    .clrwb{
+      color:black;
+    }
+  }
+  .content{
+    background: rgba(42,42,42,0.6);
+   // height: 48px;
+    width: 100%;
+    position: absolute;
+    bottom: 26px;
+  }
+
+ion-slides{
+  --bullet-background :none;
+  --bullet-background-active:none;
+}
+.explore{
+  font-family:'Source Sans Pro', sans-serif !important;
+  font-size:11pt;
+  color:white;
+}
+.tit{
+  font-size:15pt;
+  font-family: 'Montserrat', sans-serif !important;
+  color:white;
+  font-weight: bold;
+  }
+.notification {
+  margin-right: 5px;
+  border: 1px solid white;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  text-align:center;
+  position:relative;
+}
+ion-badge{
+  --background: #ED145B;
+  --padding: 3px;
+  --padding-start: 3px;
+  --padding-end: 2px;
+  --padding-top: 1px;
+  --padding-bottom: 1px;
+  position:absolute;
+  top: 7px;
+  right: 13px;
+  border-radius:50%;
+}
+.box{
+  background: #2A2A2A;
+  height: 100px;
+  width: 100%;
+ // width:50%;
+  text-align: center;
+  padding: 5px;
+  border-radius:8px;
+  margin-right:10px;
+}
+.fontSans{
+  font-family:'Source Sans Pro', sans-serif !important;
+}
+.fs8{
+  font-size:8pt;
+}
+.fontMoteret{
+  font-family: 'Montserrat', sans-serif !important;
+}
+.clrw{
+  color:white;
+}
+.ml15{
+  margin-left:15px;
+}
+.clr{
+  color:#ED145B;
+}
+.fs16{
+  font-size:13pt;
+}
+.fs9{
+  font-size:9pt;
+}
+.favcontent{
+  background: rgba(42,42,42,0.6);
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+.fs8{
+  font-size:8pt;
+}
+.card{
+  display:block;
+  width:100%;
+ // height: 180px !important;
+  border-radius: 10px;
+}
+.cardcontent{
+  position:relative;
+  margin-top:20px;
+  text-align:center;
+ // margin-left:3px;
+ // margin-right:3px;
+}
+.contains{
+.swiper-slide {
+  width: 45% !important;
+	&:last-child {
+	  width: 45% !important;
+	}
+}
+}
+.containsbox{
+  .swiper-slide {
+    width: 90% !important;
+    &:last-child {
+      width: 90% !important;
+    }
+  }
+  }
+ion-slide.md.swiper-slide.swiper-zoom-container.hydrated.swiper-slide-active {
+  margin-right: 3px;
+}
+/*.fs10{
+  font-size:10pt;
+}*/
+.mr15{
+  margin-right:15px;
+}
+.mt10{
+  margin-top:10px;
+}
+
+.image {
+  border-radius: 50%;
+  width: 38px;
+}
+
+
+/* new star rating */
+.ratings {
+  position: relative;
+  vertical-align: middle;
+  display: inline-block;
+  color: #b1b1b1;
+  overflow: hidden;
+}
+.full-stars {
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fde16d;
+}
+.empty-stars:before, .full-stars:before {
+  content:"\2605\2605\2605\2605\2605";
+  font-size: 14pt;
+}
+.empty-stars:before {
+  -webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+  -webkit-text-stroke: 1px orange;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
+
+/* Firefox */
+@-moz-document url-prefix() {
+  .full-stars {
+      color: #ECBE24;
+  }
+}
+.full-stars1{
+  position: absolute;
+  right:0;
+  top: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #fde16d;
+}
+.md,
+.ios,
+.wp {
+    .swiper-slide .swiper-slide-active{
+       width: 100px;//your width here
+   }
+ }
+ .welcome{
+ background-color: #BA2B59;
+ border: none;
+ color: white;
+ padding: 20px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ margin: 4px 2px;
+ cursor: pointer;
+ border-radius: 27px;
+ width: 90%;
+}
+
+/* tab3 css */
+.fmc{
+  color: white;
+  font-family: 'Cairo', sans-serif;
+}
+.box{
+  border-radius:8px;
+  background-color: #2A2A2A;
+  color:white;
+  margin-top:15px;
+}
+.blr{
+  border-left:5px solid #ED145B;
+}
+.blg{
+  border-left:5px solid #16A085;
+}
+.fs12{
+  font-size:12pt;
+}
+.fs23{
+  font-size:23pt;
+}
+.fs13{
+  font-size:13pt;
+}
+.fs9{
+  font-size:9pt;
+}
+.clrw{
+  color:white;
+}
+.clrg{
+  color:#16A085;
+}
+.clrgr{
+  color:#999999;
+}
+.col1{
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;      
+}
+.fs10{
+  font-size:10pt;
+}

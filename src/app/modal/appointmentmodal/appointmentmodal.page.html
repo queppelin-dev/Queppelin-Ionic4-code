@@ -1,0 +1,15 @@
+
+
+<ion-content>
+<div class="txtcntr mt20 pb10 bb1">
+<ion-label>{{ 'appointmentmodal.areyousure' | translate }}</ion-label>
+</div>
+<div class="btn mt5">
+    <ion-button class="changebtn" fill="clear" (click)="closemodal()" >
+        {{ 'appointmentmodal.oopsno' | translate }}
+    </ion-button>
+    <ion-button class="cancelbtn" fill="clear" >
+        {{ 'appointmentmodal.cancel' | translate }}<br> {{ 'appointmentmodal.appointment' | translate }}
+    </ion-button>
+  </div>
+</ion-content>

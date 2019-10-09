@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar color="primary" mode="ios">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'feedback.feedback' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+  <div *ngIf="feedbackandsupport">
+<ion-list>
+  <ion-item>
+    {{ 'feedback.likefeedback' | translate }}
+    <button class="likebtn" fill="clear" slot="end">{{ 'feedback.likebtn' | translate }}</button>
+  </ion-item>
+  <ion-item (click)="sendfeedback()">
+    {{ 'feedback.sendfeedback' | translate }}
+    <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+  <ion-item (click)="presentModal()">
+    {{ 'feedback.ratefeedback' | translate }}
+    <ion-icon class= "icon-color" name="ios-arrow-forward" slot="end"></ion-icon>
+  </ion-item>
+</ion-list>
+  </div>
+<div *ngIf="feedback">
+  <ion-list style="margin-left:5px;margin-right:5px;">
+    <ion-item>
+        <ion-label>Type</ion-label>
+        <ion-textarea rows="1" cols="1" [(ngModel)]="feedbackdata.type" name="type" placeholder="Enter type"></ion-textarea>
+      </ion-item>
+  <ion-item>
+    <ion-label>Description</ion-label>
+    <ion-textarea rows="3" cols="5" [(ngModel)]="feedbackdata.description" name="description" placeholder="Enter any notes here..."></ion-textarea>
+  </ion-item>
+</ion-list>
+<div style="text-align:center;margin-top:5px;" (click)="submitfeedback()">
+  <ion-button style="width:80%;">Submit</ion-button>
+</div>
+
+</div>
+</ion-content>

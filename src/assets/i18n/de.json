@@ -1,0 +1,225 @@
+{
+    "location": {
+        "enable": "مقام کی خدمات کو فعال کریں",
+        "content": "آپ کے ارد گرد بہترین صحت و صحت، صحت، خوبصورتی اور پیشہ ورانہ خدمات اور دیگر سفارشات حاصل کریں!  ",
+         "uselocation":"شیڈولسکس آپ کے مقام کا استعمال کرنے کی ضرورت ہوگی",
+        "enablebtn": "مقام کو فعال کریں",
+        "notnowbtn":"ابھی نہیں"
+    },
+    "tab1":{
+        "explore": "تقرری کتابوں کو تلاش کری",
+        "review": "جائزے",
+        "health": "صحت اور فلاح و بہبود",
+        "education": "تعلیم",
+        "medicine" : "طب",
+        "fitness": "صحت اور تفریح",
+        "salon" : "سیلون اور خوبصورتی",
+        "professional": "پیشہ ورانہ خدمات",
+        "goverment": "سرکاری خدمات",
+        "other": "دیگر خدمات ",
+        "myfav": "میری پسند",
+        "appointment": "تقرری",
+        "nofav": "ابھی کوئی پسندیدہ نہیں بچا"
+
+    },
+    "tab2":{
+      "salon": "Salon",
+      "beauty": "Beauty",
+      "exploresub": "Explore sub categories and book appointment",
+      "lookingfor": "What are you looking for",
+      "near": "Near you",
+      "when": "When?",
+      "all": "All",
+      "babershop": "Babershop",
+      "hairsalon":"Hair Salon",
+      "massage": "Massage",
+      "dayspa": "Day Spa",
+      "Beauty": "Beauty",
+      "review": "Reviews",
+      "noresult": "No results found",
+      "notanything": "We could not find anything based on your search. Try verifying spelling, location and date or changing the category, then search again."
+  },
+  "tab3":{
+      "appointment": "Appointments",
+      "today": "Today",
+      "confirmed": "CONFIRMED",
+      "upcoming":"UPCOMING APPOINTMENT",
+      "call": "CALL",
+      "reminder": "Add Reminder",
+      "change": "CHANGE",
+      "cancel":"CANCEL"
+  },
+  "tab4":{
+      "getbyinvite": "Get 10 DBH by inviting your favorite service to schedulix!",
+      "account": "Account Details",
+      "Address": "Address",
+      "reviews": "Reviews",
+      "payments": "Payments",
+      "settings": "Settings",
+      "feedback": "Feedback and support",
+      "About Schedulix": "About Schedulix",
+      "Logout": "Logout"
+  },
+  "tabs":{
+      "yourschedulix": "Your schedulix",
+      "explore": "Explore",
+      "appointments": "Appointments",
+      "myprofile": "My Profile"
+  },
+  "details-page":{
+      "services": "Services",
+      "details": "Details",
+      "reviews": "Reviews",
+      "bookbtn": "Book",
+      "basedon": "based on",
+      "clientreview": "clients reviews",
+      "personal": "Personal Details",
+      "contact": "Contact numbers",
+      "call": "Call",
+      "montothu": "Monday - Thursday",
+      "friday": "Friday",
+      "sattosun": "Saturday - Sunday",
+      "sunappointment": "Sunday Appointment Only",
+      "scheduleday": "Schedule a day before, no same day appointments"
+  },
+  "bookappointment":{
+     "bookappointment": "Book an Appointment",
+     "addservice": "ADD ANOTHER SERVICES",
+     "confirmbtn": "Confirm"
+  },
+ "signin":{
+     "signinto": "Sign in to",
+     "continue": "continue",
+     "enterphone": "Enter Phone",
+     "number": "Number",
+     "enteremail": "Enter Email",
+     "signin": "Sign in",
+     "signup": "Sign up",
+     "continueappointment": "to continue appointment booking please choose one from the below option to sign in",
+     "continuephone": "CONTINUE WITH PHONE",
+     "contineemail": "CONTINUE WITH EMAIL",
+     "continuefacebook": "CONTINUE WITH FACEBOOK",
+     "unwanteddetails": "schedulix USERS YOUR CONTACT DETAILS TO BOOK APPOINTMENT. WE WON’T SEND YOU UNWANTED EMAIL OR POST ON YOUR FACEBOOK PAGE.",
+     "enterphonenumber": "Enter Phone Number",
+     "entervalidnumber": "Enter a valid mobile phone number. We will use it to send you a confirmation code.",
+     "phonenumber": "Phone number",
+     "donebtn": "Done",
+     "entervaildemail": "Enter a valid email. We will use it to send you a confirmation code.",
+     "email": "Email",
+     "password": "Password",
+     "confirmationcode": "Confirmation Code",
+     "confirmationtext": "We will send a text message with your confirmation code. Enter this code below.",
+     "resendcode": "Resend the code",
+     "changephoneno": "Change phone number",
+     "nextbtn":"Next",
+     "name": "Name",
+     "confirmpassword": "Confirm Password",
+     "registerbtn": "Register",
+     "GetthebestHealth&Wellness":"Get the best Health & Wellness,",
+     "EducationSalon&BeautyProfessional Services":"Education, Salon & Beauty, Professional Services",
+     "Logintoyouraccount":"Login to your account",
+     "Manageyouraccountandseeyouappointmentshistory":"Manage your account and see you appointments history",
+     "Forgot":"Forgot",
+     "Login":"Login",
+     "Don’thaveanaccount":"Don’t have an account?",
+     "SendOtp":" Send Otp",
+     "firstname":"first name",
+     "lastname":"last name"
+  },
+  "account-details":{
+    "account":"Account Details",
+    "personal": "Personal Details",
+    "firstandlastname":"First and last name",
+    "email":"Email",
+    "changebtn":"Change",
+    "mobilenumber":"Mobile number",
+    "Birth Date": "Birth Date",
+    "servicetype": "Service Type",
+    "firstshow": "First, show me services for.",
+    "woman": "WOMAN",
+    "man": "MAN",
+    "both": "BOTH",
+    "savebtn": "Save"
+  },
+  "address":{
+    "address": "Address",
+    "forsomeservice": "For some services, your home address might be required",
+    "street": "Street",
+    "City": "City",
+    "postcode": "Post Code"
+  },
+  "feedback":{
+    "feedback":"Feedback and support",
+    "likefeedback": "Like us on Facebook",
+    "likebtn":"Like",
+    "sendfeedback": "Send us feedback",
+    "ratefeedback": "Rate schedulix in App Store"
+  },
+  "payment":{
+    "onlinepayment":"Your online Payments",
+    "payservice": "To pay for services with your phone, add a payment card",
+    "addpayment": "ADD PAYMENT CARD",
+    "username": "User name",
+    "Card number": "Card number",
+    "exp": "Exp",
+    "cvv":"CVV/CVC",
+    "addcard": "ADD CARD",
+    "savedcard": "Saved Card",
+    "visa": "Visa",
+    "creditcard": "Credit Card",
+    "mastercard": "Master Card",
+    "deletebtn": "Delete",
+    "cardaddedsuccess": "Card successfully added",
+    "providedcard": "The provided card number is incorrect. Please verify and try again. if the problem persists, please try a different card.",
+    "backcarddetails": "BACK TO CARD DETAILS",
+    "cardaddedfailed": "Card added failed"
+  },
+  "review":{
+    "review":"Reviews",
+    "sortdate": "Sort by Date"
+  },
+  "settings":{
+    "setting":"Settings",
+    "notification": "Notifications",
+    "account":"Account Details",
+    "appointmentstatus": "Appointment status changes, Notify me by",
+    "appnotification": "App Notification",
+    "email": "Email",
+    "review": "Reviews",
+    "changepassword": "Change Password",
+    "automaticenglish": "Automatic English",
+    "country": "Country"
+
+  },
+  "about":{
+      "about": "About Schedulix",
+      "schedulixwebsite": "Schedulix Website",
+      "termsandservice":" Terms and Conditions",
+      "privatepolicy": "Privacy Policy",
+      "licence": "Licence"
+  },
+  "appointmentmodal":{
+      "areyousure":"ARE YOU SURE?",
+      "oopsno": " OOPS, NO",
+      "cancel": "CANCEL",
+      "appointment": "APPOINTMENT"
+  },
+  "ratemodal":{
+      "whatthink": "What do you think of schedulix ?",
+      "selectrating": "Select a star rating"
+  },
+  "notifications":{
+    "Notifications":"Notifications",
+    "NewIncomingRequest":"New Incoming Request",
+    "Wishyouhappenrequests":"Wish you happen requests",
+    "RequestCancelled":"Request Cancelled",
+    "Checkandknowthereason":"Check and know the reason",
+    "schedulix":"schedulix",
+    "Checktheupdatedoffersandbundles":"Check the updated offers and bundles",
+    "RateandReview":"Rate and Review",
+    "Checkclientfeedback":"Check client feedback"
+  }
+
+}
+
+

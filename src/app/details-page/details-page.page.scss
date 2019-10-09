@@ -1,0 +1,278 @@
+ion-segment-button{
+  border: none !important;
+  color: white;
+  --background-checked: none;
+  --background-hover:none;
+  text-transform:none;
+  --padding-start:0px !important;
+  min-width:0px !important;
+  --color-checked:#ED145B !important;
+  margin-left:5px;
+}
+.ios ion-segment-button{
+padding:5px;
+}
+
+.product {
+  width:100%;
+  height: 30%;
+  background-color:#BA2B59;
+  position:relative;
+}
+
+ion-content{
+  --background:white;
+}
+
+.list-md {
+  background:none;
+}
+
+ion-item {
+  --background:#f4f4f4 !important;
+  .bg3 {
+      --background:red !important;
+  }
+
+  .bg-p {
+    --background: #EDEDED !important;
+  }
+}
+
+.bg3 {
+  --background:#FFFFFF !important;
+}
+
+.text-style {
+  color: #2A2A2A;
+  font-size: 16px;
+  padding-left: 16px;
+  margin: 0px;
+  padding: 0px;
+}
+.text-style1 {
+  color: #636162;
+  font-size: 12px;
+  padding-left: 16px;
+  margin: 0px;
+  padding: 0px;
+  text-align: right;
+}
+
+.btn {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #B92B59;
+  color:white;
+  width: 70px;
+  font-weight: 600;
+  height: 30px;
+  margin-left: 12px;
+}
+
+.btn1 {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #16A085;
+  color:white;
+  width: 50px;
+  font-weight: 500;
+  height: 30px;
+  margin-left: 12px;
+}
+
+.content{
+  background: rgba(42,42,42,0.6);
+  height: 60px;
+  width: 100%;
+  position: absolute;
+ // top: 87px;
+ bottom:0px;
+}
+.fs8{
+  font-size:8pt;
+}
+.fontMoteret{
+  font-family: 'Montserrat', sans-serif !important;
+  color:white;
+}
+.fontSans {
+  //background-color:white;
+  color:white;
+}
+
+.header {
+  --background: #BA2B59 !important;
+}
+
+#map_canvas {
+  height: 150px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: lightgray;
+}
+.map {
+  height: 25%;
+}
+.txt {
+  color:#2A2A2A;
+  padding:10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+
+}
+
+.star{
+  padding:10px;
+  padding-bottom: 0px;
+}
+
+hr {
+  border-top:1px dashed lightgray;
+}
+.title {
+height: 40px;
+background: #E6E6E6;
+color:#2a2a2a !important;
+}
+.txt1 {
+font-size: 12px;
+padding-left: 10px;
+}
+
+.smltxt {
+font-size: 12px;
+color: gray;
+padding-left: 8px;
+margin-top: 8px;
+margin-bottom: 0px;
+}
+.medtxt {
+font-size: 15px;
+//padding-left: 8px;
+margin-top: 0px;
+}
+.medtxt2 {
+font-size: 15px;
+// padding-left: 8px;
+}
+
+.medtxt1 {
+font-size: 13px;
+}
+
+.rating-txt {
+margin-top: 0px;
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+margin-bottom: 0px;
+}
+
+.total-count {
+font-size: 12px !important;
+}
+
+.progress-bar {
+height: 1px;
+color: #16A085 !important;
+margin-top: 5px;
+}
+
+ion-progress-bar {
+--progress-background: #16A085;
+--buffer-background:#f4f4f4;
+}
+
+.progress-setting {
+margin-top: 5px;
+padding-top: 0px;
+padding-bottom: 0px;
+padding-right: 0px;
+}
+
+ion-avatar{
+width: 40px;
+height: 40px;
+}
+
+.reply-bg {
+background: #EDEDED;
+padding: 4px;
+border-radius: 10px;
+margin-top:0px;
+margin-bottom:0px;
+}
+.pl8{
+padding-left:8px;
+}
+.pr8{
+padding-right:8px;
+}
+.mt0{
+margin-top:0px;
+}
+
+.ratings {
+position: relative;
+vertical-align: middle;
+display: inline-block;
+color: #b1b1b1;
+overflow: hidden;
+}
+.full-stars {
+position: absolute;
+left: 0;
+top: 0;
+white-space: nowrap;
+overflow: hidden;
+color: #ffd700;
+//width:;
+}
+.empty-stars:before, .full-stars:before {
+content:"\2605\2605\2605\2605\2605";
+font-size: 14pt;
+}
+.empty-stars:before {
+-webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+-webkit-text-stroke: 1px #ffd700;
+}
+
+/* new star rating */
+.ratings {
+position: relative;
+vertical-align: middle;
+display: inline-block;
+color: #b1b1b1;
+overflow: hidden;
+}
+.full-stars {
+position: absolute;
+left: 0;
+top: 0;
+white-space: nowrap;
+overflow: hidden;
+color: #fde16d;
+}
+.empty-stars:before, .full-stars:before {
+content:"\2605\2605\2605\2605\2605";
+font-size: 14pt;
+}
+.empty-stars:before {
+-webkit-text-stroke: 1px #848484;
+}
+.full-stars:before {
+-webkit-text-stroke: 1px orange;
+}
+/* Webkit-text-stroke is not supported on firefox or IE */
+
+/* Firefox */
+@-moz-document url-prefix() {
+.full-stars {
+    color: #ECBE24;
+}
+}
+

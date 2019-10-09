@@ -1,0 +1,228 @@
+{
+    "location": {
+        "enable": "قم بتفعيل خدمات تحديد الموقع",
+        "content": "!للحصول على أفضل صحة وعافية ، وتعليم ، وصالون و جمال ، والخدمات الاحترافية وغيرها من التوصيات من حولك",
+        "uselocation":" سوف يحتاج ات يستخدم موقعك Schedulix",
+        "enablebtn": "تفعيل الموقع",
+        "notnowbtn":"ليس الأن"
+    },
+    "tab1":{
+        "explore": "استكشف لحجز المواعيد",
+        "review": "التعليقات",
+        "health": "الصحة والعافية",
+        "education": "التعليم",
+        "medicine": "الطب",
+        "fitness" : "اللياقة البدنية والترفيه",
+        "salon" : "صالون و تجميل",
+        "professional": "خدمات احترافية",
+        "goverment": "خدمات حكومية",
+        "other": "خدمات أخرى",
+        "myfav": "المفضلة عندى",
+        "appointment": "المواعيد",
+        "nofav": "لم يتم حفظ أي المفضلة الآن.",
+       "confirm":"تأكيد التعيين"
+
+    },
+    "tab2":{
+        "salon": "صالون",
+        "beauty": "جمال",
+        "exploresub": "استكشف الفئات الفرعية وقم بحجز الميعاد",
+        "lookingfor": "ماذا تبحث عن؟",
+        "near": "قريب منك",
+        "when": "متى؟",
+        "all": "الكل",
+        "babershop": "صالون حلاقة",
+        "hairsalon":"صالون شعر",
+        "massage": "تدليك",
+        "dayspa": "منتجع يومى",
+        "Beauty": "جمال",
+        "review": "التعليقات",
+        "noresult": "لا يوجد نتائج",
+        "notanything": "لم نتمكن من العثور على أي شيء بناءً على بحثك. حاول التحقق من الهجاء والموقع والتاريخ أو تغيير الفئة ، ثم ابحث مرة أخرى."
+    },
+    "tab3":{
+        "appointment": "المواعيد",
+        "today": "اليوم",
+        "confirmed": "مؤكد",
+        "upcoming":"المواعيد القادمة",
+        "call": "مكالمة",
+        "reminder": "إضافة تذكير",
+        "change": "تغيير",
+        "cancel":"الغاء",
+        "Thereisnoappointment":"لا يوجد موعد"
+    },
+    "tab4":{
+        "getbyinvite": "!schedulix احصل على 10 دينار بحرينى من خلال دعوة خدمتك المفضلة إلى",
+        "account": "تفاصيل الحساب",
+        "Address": "العنوان",
+        "reviews": "التعليقات",
+        "payments": "المدفوعات",
+        "settings": "الضبط",
+        "feedback": "ردود الفعل والدعم",
+        "About Schedulix": "Schedulix عن",
+        "Logout": "تسجيل الخروج"
+    },
+    "tabs":{
+        "yourschedulix": "Your schedulix",
+        "explore": "استكشف",
+        "appointments": "المواعيد",
+        "myprofile": "حسابى"
+    },
+    "details-page":{
+        "services": "خدمات",
+        "details": "التفاصيل",
+        "reviews": "التعليقات",
+        "bookbtn": "احجز",
+        "basedon": "بناءً على",
+        "clientreview": "تعليقات العملاء",
+        "personal": "التفاصيل الشخصية",
+        "contact": "ارقام التواصل",
+        "call": "مكالمة",
+        "montothu": "الاثنين - الخميس",
+        "friday": "الجمعة",
+        "sattosun": "السبت - الأحد",
+        "sunappointment": "مواعيد الأحد فقط",
+        "scheduleday": "حدد موعدًا قبل يوم ، ولا توجد مواعيد في نفس اليوم"
+    },
+    "bookappointment":{
+       "bookappointment": "احجز موعد",
+       "addservice": "إضافة خدمات أخرى",
+       "confirmbtn": "تأكيد"
+    },
+   "signin":{
+       "signinto": "تسجيل الدخول إلى",
+       "continue": "استمر",
+       "enterphone": "أدخل الهاتف",
+       "number": "الرقم",
+       "enteremail": "أدخل البريد الإلكتروني",
+       "signin": "تسجيل الدخول",
+       "signup": "سجل",
+       "continueappointment": "لمتابعة حجز موعد ، يرجى اختيار واحد من الخيارات أدناه لتسجيل الدخول",
+       "continuephone": "تابع مع الهاتف",
+       "contineemail": "تابع مع البريد الإلكتروني",
+       "continuefacebook": "تابع مع الفيسبوك",
+       "unwanteddetails": "تفاصيل الاتصال الخاصة بك لحجز موعد. لن نرسل لك بريدًا إلكترونيًا غير مرغوب فيه أو نشره على صفحة الفيسبوك الخاصة بك مستخدمين schedulix ",
+       "enterphonenumber": "أدخل رقم الهاتف",
+       "entervalidnumber": "أدخل رقم هاتف محمول صحيح. سوف نستخدمها لنرسل لك رمز التأكيد",
+       "phonenumber": "رقم الهاتف",
+       "donebtn": "تم",
+       "entervaildemail": "أدخل بريد إلكتروني صحيح. سوف نستخدمها لنرسل لك رمز التأكيد.",
+       "email": "البريد الإلكتروني",
+       "password": "كلمه السر",
+       "confirmationcode": "تأكيد الكود",
+       "confirmationtext": "سوف نرسل رسالة نصية مع رمز التأكيد الخاص بك. أدخل هذا الكود أدناه.",
+       "resendcode": "إعادة إرسال الرمز",
+       "changephoneno": "غير رقم الهاتف",
+       "nextbtn":"التالى",
+       "name": "الاسم",
+       "confirmpassword": "تأكيد كلمة المرور",
+       "registerbtn": "تسجيل",
+       "GetthebestHealth&Wellness":"الحصول على أفضل الصحة والعافية ،",
+       "EducationSalon&BeautyProfessional Services":"التعليم ، صالون و الجمال ، الخدمات المهنية",
+       "Logintoyouraccount":"تسجيل الدخول إلى حسابك",
+       "Manageyouraccountandseeyouappointmentshistory":"إدارة حسابك وشاهد تاريخ مواعيدك",
+       "Forgot":"نسيت",
+       "Login":"تسجيل الدخول",
+       "Don’thaveanaccount":"ليس لديك حساب؟",
+       "SendOtp":"Otp إرسال ",
+       "firstname":"الأسم الأول",
+       "lastname":"الأسم الأخير"
+    },
+    "account-details":{
+      "account":"تفاصيل الحساب",
+      "personal": "التفاصيل الشخصية",
+      "firstandlastname":"الاسم الأول والاسم الأخير",
+      "email":"البريد الإلكتروني",
+      "changebtn":"تغيير",
+      "mobilenumber":"رقم الهاتف المحمول",
+      "Birth Date": "تاريخ الميلاد",
+      "servicetype": "نوع الخدمة",
+      "firstshow": "أولا ، أرني الخدمات ل.",
+      "woman": "النساء",
+      "man": "رجل",
+      "both": "كلا",
+      "savebtn": "حفظ"
+    },
+    "address":{
+      "address": "العنوان",
+      "forsomeservice": "بالنسبة لبعض الخدمات ، قد يكون عنوان منزلك مطلوبًا",
+      "street": "الشارع",
+      "City": "المدينة",
+      "postcode": "الرمز البريدي"
+    },
+    "feedback":{
+      "feedback":"ردود الفعل والدعم",
+      "likefeedback": "اعجب بنا على الفيسبوك",
+      "likebtn":"اعجاب",
+      "sendfeedback": "أرسل لنا ردود الفعل",
+      "ratefeedback": "في متجر التطبيقات schedulix قيم "
+    },
+    "payment":{
+      "onlinepayment":"المدفوعات الخاصة بك على الانترنت",
+      "payservice": "لدفع تكاليف الخدمات باستخدام هاتفك ، أضف بطاقة دفع",
+      "addpayment": "إضافة بطاقة الدفع",
+      "username": "اسم المستخدم",
+      "Card number": "رقم البطاقة",
+      "exp": "تاريخ الانتهاء",
+      "cvv":"CVV/CVC",
+      "addcard": "اضف البطاقة",
+      "savedcard": "البطاقة المحفوظة",
+      "visa": "فيزا",
+      "creditcard": "بطاقة الائتمان",
+      "mastercard": "بطاقة ماستر بطاقة ائتمان",
+      "deletebtn": "مسح",
+      "cardaddedsuccess": "تمت إضافة البطاقة بنجاح",
+      "providedcard": "رقم البطاقة المقدمة غير صحيح. يرجى التحقق والمحاولة مرة أخرى. إذا استمرت المشكلة ، يرجى تجربة بطاقة مختلفة.",
+      "backcarddetails": "العودة إلى تفاصيل البطاقة",
+      "cardaddedfailed": "فشل بطاقة المضافة"
+    },
+    "review":{
+      "review":"التعليقات",
+      "sortdate": "رتب حسب التاريخ"
+    },
+    "settings":{
+      "setting":"الضبط",
+      "notification": "الأشعارات",
+      "account":"تفاصيل الحساب",
+      "appointmentstatus": "تغيير حالة الموعد ، أخطرني",
+      "appnotification": "تنبيهات التطبيق",
+      "email": "البريد الإلكتروني",
+      "review": "التعليقات",
+      "changepassword": "غير كلمة السر",
+      "automaticenglish": "اللغة الإنجليزية التلقائي",
+      "country": "البلد",
+      "themes": "المواضيع",
+      "sms":"رسالة قصيرة"
+    },
+    "about":{
+        "about": "Schedulix عن",
+        "schedulixwebsite": "Schedulix موقع",
+        "termsandservice":" الأحكام والشروط",
+        "privatepolicy": "سياسة الخصوصية",
+        "licence": "الرخصة"
+    },
+    "appointmentmodal":{
+        "areyousure":"هل أنت متأكد؟",
+        "oopsno": " عفوًا ، لا",
+        "cancel": "الغاء",
+        "appointment": "الموعد"
+    },
+    "ratemodal":{
+        "whatthink": "؟Schedulix ما رأيك ب",
+        "selectrating": "أختر نجمة تقيميك؟"
+    },
+    "notifications":{
+      "Notifications":"الاشعارات",
+      "NewIncomingRequest":"طلب وارد جديد",
+      "Wishyouhappenrequests":"أتمنى لك طلبات جديدة",
+      "RequestCancelled":"طلب ملغى",
+      "Checkandknowthereason":"تحقق ومعرفة السبب",
+      "schedulix":"schedulix",
+      "Checktheupdatedoffersandbundles":"تحقق من العروض والحزم المحدثة",
+      "RateandReview":"قيم وعلق",
+      "Checkclientfeedback":"تحقق من ردود افعال العملاء"
+    }
+
+}
+
+

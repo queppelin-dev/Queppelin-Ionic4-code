@@ -1,0 +1,120 @@
+<ion-header *ngIf="showHeader">
+    <ion-toolbar color="primary" mode="ios">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'payment.onlinepayment' | translate }}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <div class="online" *ngIf="onlinepage">
+    <img src="assets/images/payment.svg"><br>
+    <div style="margin-top:15px;">
+    <ion-label class="clrg">{{ 'payment.onlinepayment' | translate }}</ion-label>
+    </div>
+    <div class="mt5">
+    <ion-label class="fontSans fs10">{{ 'payment.payservice' | translate }}</ion-label>
+    </div>
+    <div class="mt5">
+    <ion-button class="btn" fill="clear" (click)="gotoPaymentPage()">
+      {{ 'payment.addpayment' | translate }}
+      </ion-button>
+  </div>
+  </div>
+  <div class="payment" *ngIf="paymentPage">
+      <div class="sort bb2">
+          <ion-label>{{ 'payment.addpayment' | translate }}</ion-label>
+        </div>
+        <div class="form">
+            <ion-item>
+              <ion-input type="text" placeholder="{{ 'payment.username' | translate }}"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input type="text" placeholder="{{ 'payment.Card number' | translate }}"></ion-input>
+            </ion-item>
+          </div>
+            <div style="margin:6px;">
+             <ion-row>
+               <ion-col>
+                  <ion-item>
+                      <ion-input type="text" placeholder="{{ 'payment.exp' | translate }}"></ion-input>
+                    </ion-item>
+               </ion-col>
+               <ion-col>
+                  <ion-item>
+                      <ion-input type="text" placeholder="{{ 'payment.cvv' | translate }}"></ion-input>
+                    </ion-item>
+               </ion-col>
+             </ion-row>     
+        </div>
+        <div class="textcntr">
+        <ion-button class="btn" fill="clear" (click)="gotoCardSuccessPage()">
+          {{ 'payment.addcard' | translate }}  
+          </ion-button>
+        </div>
+        <div class="mt10">
+            <div class="sort bt2 bb2">
+                <ion-label>{{ 'payment.savedcard' | translate }}  </ion-label>
+            </div>
+        </div>
+        <div class="m10">
+        <ion-list>
+            <ion-item>
+              <img src="assets/images/smartphone.svg">&nbsp;&nbsp;
+             <ion-label><span class="clrphone">{{ 'payment.visa' | translate }}</span><br>
+              <span class="fs9 clrphone">{{ 'payment.creditcard' | translate }}, 3243</span></ion-label>
+              <button class="delbtn" fill="clear" slot="end">{{ 'payment.deletebtn' | translate }}</button>
+            </ion-item>
+            <ion-item>
+                <img src="assets/images/smartphone.svg">&nbsp;&nbsp;
+               <ion-label><span class="clrphone">{{ 'payment.mastercard' | translate }}</span><br>
+                <span class="fs9 clrphone">{{ 'payment.creditcard' | translate }}, 3243</span></ion-label>
+                <button class="delbtn" fill="clear" slot="end">{{ 'payment.deletebtn' | translate }}</button>
+              </ion-item>
+              <ion-item>
+                  <img src="assets/images/smartphone.svg">&nbsp;&nbsp;
+                 <ion-label><span class="clrphone">{{ 'payment.mastercard' | translate }}</span><br>
+                  <span class="fs9 clrphone">{{ 'payment.creditcard' | translate }}, 3243</span></ion-label>
+                  <button class="delbtn" fill="clear" slot="end">{{ 'payment.deletebtn' | translate }}</button>
+                </ion-item>
+            </ion-list>
+            </div>
+          </div>
+          <div class="cardsuccess" *ngIf="cardsuccess">
+           <div style="text-align:center;margin-top:110px;">
+           <img src="assets/images/cardsuccess.svg">
+           
+           <div class="mt10">
+           <ion-label class="clrgrn">{{ 'payment.cardaddedsuccess' | translate }}</ion-label>
+           </div>
+           <div class="mt5">
+              <ion-label class="clrgrn fontSans fs9">{{ 'payment.providedcard' | translate }}.</ion-label>
+           </div>
+           <div class="mt10">
+              <ion-button class="btn" fill="clear" (click)="goTOpaymentPage()">
+                {{ 'payment.backcarddetails' | translate }}
+              </ion-button>
+           </div>
+           </div>
+          </div>
+          <div class="cardfail" *ngIf="cardfail">
+              <div class="textcntr mt110">
+              <img src="assets/images/cardfail.svg">
+              
+              <div class="mt10">
+              <ion-label class="clrred">{{ 'payment.cardaddedfailed' | translate }}</ion-label>
+              </div>
+              <div class="mt5">
+                 <ion-label class="clrred fontSans fs9">{{ 'payment.providedcard' | translate }}</ion-label>
+              </div>
+              <div class="mt10">
+                 <ion-button class="btn" fill="clear" (click)="goTOpaymentPage()">
+                  {{ 'payment.backcarddetails' | translate }} 
+                 </ion-button>
+              </div>
+              </div>
+            </div>
+        </div>
+      </ion-content>

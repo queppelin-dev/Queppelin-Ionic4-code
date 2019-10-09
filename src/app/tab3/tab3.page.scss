@@ -1,0 +1,147 @@
+ion-toolbar{
+  --background:#2A2A2A;
+   padding:5px;
+  }
+  .fontMoteret{
+    font-family: 'Montserrat', sans-serif !important;
+    color:white;
+  }
+  ion-content{
+    --background:black;  
+  }
+  .fmc{
+    color: white;
+    font-family: 'Cairo', sans-serif;
+  }
+  .box{
+    border-radius:8px;
+    background-color: #2A2A2A;
+    color:white;
+    margin-top:15px;
+  }
+  .blr{
+    border-left:5px solid #ED145B;
+  }
+  .blg{
+    border-left:5px solid #16A085;
+  }
+  .fs12{
+    font-size:12pt;
+  }
+  .fs23{
+    font-size:23pt;
+  }
+  .fs13{
+    font-size:13pt;
+  }
+  .fs9{
+    font-size:9pt;
+  }
+  .clrw{
+    color:white;
+  }
+  .clrg{
+    color:#16A085;
+  }
+  .clrgr{
+    color:#999999;
+  }
+  .col1{
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;      
+  }
+  .fs10{
+    font-size:10pt;
+  }
+
+  .bg1{
+    --background:white;
+  
+    ion-list {
+      background-color:white;
+      color:black;
+    }
+
+    .clrw {
+      color:black;
+    }
+  }
+  .clrg{
+    color:#16A085;
+}
+.mt10{
+    margin-top:10px;
+}
+.ml10{
+    margin-left:10px;
+}
+.fs10{
+    font-size:10pt;
+}
+.btn1 {
+    padding: 8px;
+    background-color: #16A085;
+    color:white;
+    //margin-left: 12px;
+  }
+  .fs12{
+      font-size:12pt;
+  }
+  .map{
+  background: #e2e2e2;
+  height: 130px;
+  width: 100%;
+}
+.mt10{
+    margin-top:10px;
+}
+.fs7{
+    font-size:7pt;
+}
+.mt12{
+    margin-top:-12px;
+}
+.changebtn{
+    --border-color:white;
+    --color:white;
+   // font-family:Montserrat;
+   // font-size: 16pt;
+   --border-width:1px;
+   --color-activated:white;
+   text-transform:none;
+   border: 1px solid white;
+   width: 140px;
+   --color-focused:white;
+   font-family:'Source Sans Pro', sans-serif !important;
+  background-color: #707070;
+  margin-right:10px;
+  margin-left:10px;
+  }
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+}
+.cancelbtn{
+    --border-color: #ED145B;
+    --color: #ED145B;
+    --border-width: 1px;
+    --color-activated: white;
+    text-transform: none;
+    border: 1px solid #ED145B;
+    width: 140px;
+    --color-focused: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+.txtr{
+  text-align:right;
+}
+.pt10{
+  padding-top:10px;
+}
+.mr10{
+  margin-right:10px;
+}

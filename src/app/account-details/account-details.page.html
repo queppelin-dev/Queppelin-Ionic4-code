@@ -1,0 +1,83 @@
+<!-- <ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'account-details.account' | translate }}</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ion-header>
+    <ion-toolbar color="primary" mode="ios">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'account-details.account' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+  <div class="title">
+    <h5 class="title-style">{{ 'account-details.personal' | translate }}</h5>
+  </div>
+  <div>
+  <ion-list>
+    <ion-item>
+      <img src="assets/images/smartphone.svg">
+      <h6 class="text-style" *ngIf="acountDetails.name">{{  acountDetails.name }} </h6>
+      <h6 class="text-style" *ngIf="!acountDetails.name">Name is not available </h6>
+    </ion-item>
+    <ion-item>
+      <img src="assets/images/smartphone.svg">
+      <h6 class="text-style" *ngIf="acountDetails.email">{{  acountDetails.email }}</h6>
+      <h6 class="text-style" *ngIf="!acountDetails.email">email is not available</h6>
+      <button slot="end" class="btn">{{ 'account-details.changebtn' | translate }}</button>
+    </ion-item>
+    <ion-item>
+      <img src="assets/images/smartphone.svg">
+      <h6 class="text-style" *ngIf="acountDetails.mobile">{{ acountDetails.mobile  }}</h6>
+      <h6 class="text-style" *ngIf="!acountDetails.mobile">Mobile no is not available</h6>
+      <button slot="end" class="btn">{{ 'account-details.changebtn' | translate }}</button>
+    </ion-item>
+    <ion-item>
+      <img src="assets/images/smartphone.svg">
+      <h6 class="text-style" *ngIf="acountDetails.dob">{{ acountDetails.dob }}</h6>
+      <h6 class="text-style" *ngIf="!acountDetails.dob">Birth Date is not available</h6>
+    </ion-item>
+  </ion-list>
+  <div class="title">
+    <h5 class="title-style">{{ 'account-details.servicetype' | translate }}</h5>
+  </div>
+  
+    <h5 class="text-center">{{ 'account-details.firstshow' | translate }}</h5>
+   <div style="text-align:center;margin-top:10px;">
+   <ion-label class="tab">
+     <!-- <ion-col class="tabs-style" style="color:red;" *ngIf="acountDetailwoman">
+      {{ accountDetailwoman }}
+      </ion-col> -->
+      <ion-col class="tabs-style">
+        {{ 'account-details.woman' | translate }}
+      </ion-col>
+      <!-- <ion-col class="tabs-style" style="color:red;" *ngIf="acountDetailman">
+        {{ accountDetailman }}
+        </ion-col> -->
+      <ion-col  class="tabs-style bl1 br1">
+       {{ 'account-details.man' | translate }}
+      </ion-col>
+      <!-- <ion-col class="tabs-style" style="color:red;" *ngIf="accountDetailboth">
+          {{ accountDetailboth }}
+      </ion-col> -->
+      <ion-col class="tabs-style" >
+          {{ 'account-details.both' | translate }}
+      </ion-col>
+    </ion-label>
+    <!-- <ion-input placeholder = "{{ acountDetails.services_type }}"></ion-input> -->
+    </div>
+  </div>
+    <div class="save-button">
+      <ion-button expand="full" style="background:#000000;" (click)="savebtn()">{{ 'account-details.savebtn' | translate }}</ion-button>
+    </div>
+  
+
+
+</ion-content>

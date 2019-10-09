@@ -1,0 +1,31 @@
+.likebtn{
+    --border-color: #001483;
+    color: #001483;
+    --border-width: 1px;
+    --color-activated: white;
+    text-transform: none;
+    border: 1px solid #001483;
+    width: 55px;
+    --color-focused: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    padding: 5px;
+    margin-left:5px;
+}
+ion-item{
+    margin-right:8px;
+    --inner-padding-end: 0px !important;
+}
+ion-button.loc{
+    --border-color:white;
+    --color:white;
+   // font-family:Montserrat;
+   // font-size: 16pt;
+   --border-width:1px;
+   --color-activated:white;
+   text-transform:none;
+   border: 1px solid white;
+   width: 252px;
+   --color-focused:white;
+   font-family:'Source Sans Pro', sans-serif !important;
+  
+  }

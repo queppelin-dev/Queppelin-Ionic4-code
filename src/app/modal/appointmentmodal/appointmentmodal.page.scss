@@ -1,0 +1,40 @@
+.txtcntr{
+    text-align:center;
+}
+.mt20{
+    margin-top:20px;
+}
+.bb1{
+    border-bottom:1px solid gray;
+}
+.pb10{
+    padding-bottom:10px;
+}
+.changebtn{
+    --border-color:white;
+    --color:white;
+   --border-width:1px;
+   --color-activated:white;
+   text-transform:none;
+   border: 1px solid white;
+   width: 45%;
+   --color-focused:white;
+   font-family:'Source Sans Pro', sans-serif !important;
+  background-color: #707070;
+  margin-left:10px;
+  }
+.cancelbtn{
+    --border-color: #ED145B;
+    --color: #ED145B;
+    --border-width: 1px;
+    --color-activated: white;
+    text-transform: none;
+    border: 1px solid #ED145B;
+    width: 45%;
+    --color-focused: white;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    margin-left:10px;
+}
+.mt5{
+    margin-top:5px;
+}

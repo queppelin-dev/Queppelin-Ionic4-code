@@ -1,0 +1,101 @@
+<ion-header>
+    <ion-toolbar color="primary" mode="ios">
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>{{ 'review.review' | translate }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+<div style="margin-bottom:10px;">
+  <div class="sort">
+    <ion-label>{{ 'review.sortdate' | translate }}</ion-label>&nbsp;&nbsp;&nbsp;
+    <ion-icon name="ios-arrow-down"></ion-icon>
+  </div>
+  <div *ngFor="let reviewData of personalreviewinformation">
+    <div class="date">
+      <ion-label class="fs10 ml10 mr10"> {{reviewData.appointment_date}} | {{reviewData.appointment_time}}</ion-label>
+    </div>
+    <div class="glr accordian-list box-shadow" >
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+          <img style="max-width: 225%;" src="assets/images/layer@3x.png">
+          </ion-col>
+          <ion-col size="9" class="ml10 mr14">
+          <ion-label>{{reviewData.business_name}}</ion-label><br/>
+          <img src="assets/images/location2.svg"><ion-label class="fontSans fs9">&nbsp;{{reviewData.distance}}, {{reviewData.address}}</ion-label><br>
+            <ion-label>
+              <rating  [(ngModel)]="rate"
+              readonly="false" 
+              size="default" 
+              (ngModelChange)="onRateChange($event, reviewData)">
+              </rating><span>{{reviewData.rate}}</span> <span>.0</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="1">
+              <div (click)="toggleGroup('i')" [ngClass]="{active: isGroupShown('i')}">
+                  <ion-icon  [name]="isGroupShown('i') ? 'ios-arrow-up' : 'ios-arrow-down'"></ion-icon>
+              </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <div *ngIf="isGroupShown('i')">
+      <div>
+      <div *ngFor="let items of reviewData.get_customer_reviews">
+        <div class="reply" >
+          <ion-row>
+            <ion-col size="1">
+            </ion-col>
+            <ion-col size="1" >
+              <img src="assets/images/layer1.png">
+            </ion-col>
+            <ion-col size="9">
+              <ion-label class="fs8 fontSans ml6">
+                <span class="clrb">{{items.comment_by_name}}</span> <span class="clrg">&nbsp;{{items.review_date}} | {{items.review_time}}</span>
+              </ion-label><br>
+              <ion-label class="fontSans clrg fs8 ml7">{{items.comment}}</ion-label>
+            </ion-col>
+          </ion-row>
+          
+        </div>
+          <div class="replyback" *ngIf = "items.reply_by_name">
+            <ion-row>
+              <ion-col offset="1.5">
+              <ion-card>
+                <ion-card-content>
+                  <ion-row>
+                    <ion-col size="1.5">
+                  <img style="width:60%;" src="assets/images/layer.png">
+                  </ion-col>
+                  <ion-col size="10.5" class="colml">
+                  <ion-label class="fs8"> <span class="clrb">{{items?.reply_by_name}}</span> <span class="clrg">&nbsp;( Replied: {{items.reply_date}}|{{items.reply_time}} )</span></ion-label><br>
+                  <ion-label>{{items.reply}}</ion-label>
+                    </ion-col>
+                    </ion-row>
+                </ion-card-content>
+              </ion-card>
+              </ion-col>
+            </ion-row>
+          </div>
+        </div>
+      </div>
+      <div class="gray">
+          <ion-row>
+            <ion-col size="1">
+            </ion-col>
+            <ion-col size="9">
+              <ion-input type="text" placeholder="| Type to add comment on “Make by GLR”" class="fs8 fontSans" [(ngModel)]="comment" (input)="addComment()">
+              </ion-input>
+            </ion-col>
+            <ion-col size="2">
+              <img style="padding-top:5px;" src="assets/images/edit.svg" (click)="writeReview()">
+            </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+</ion-content>
