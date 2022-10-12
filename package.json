@@ -38,7 +38,7 @@
     "@ngx-translate/core": "^9.1.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "angularfire2": "^5.2.1",
-    "cordova-android": "^7.1.2",
+    "cordova-android": "^11.0.0",
     "cordova-plugin-android-permissions": "^1.0.0",
     "cordova-plugin-calendar": "^5.1.4",
     "cordova-plugin-datepicker": "^0.9.3",
